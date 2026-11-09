@@ -7,6 +7,7 @@
 > Autonomous Systems Architecture, Deterministic Data Formats & Databaseless Computing Environments.
 
 [![Architecture](https://img.shields.io/badge/Architecture-BEJSON%20104a%20%2F%20105-DE2626.svg)](#bejson-schema-driven-graphics-engine)
+[![Libraries](https://img.shields.io/badge/Flagship-BEJSON%20Libraries%20105-red.svg)](#flagship-canonical-libraries-libraries_105--libraries_104)
 [![Persistence](https://img.shields.io/badge/Persistence-MFDB%20Flat--File-black.svg)](#multi-file-database-mfdb)
 [![Discipline](https://img.shields.io/badge/CLI%20Discipline-57--Column%20Portrait-black.svg)](#57-column-portrait-cli-discipline)
 [![Website](https://img.shields.io/badge/Portal-boehnenelton2024.pages.dev-blue.svg)](https://boehnenelton2024.pages.dev)
@@ -22,6 +23,26 @@
   - [2. O(1) Field Map Cache Resolution](#2-o1-field-map-cache-resolution)
   - [3. Deterministic Vector Compilation Pipeline](#3-deterministic-vector-compilation-pipeline)
 - [System Architecture & Data Flow Pipeline](#system-architecture--data-flow-pipeline)
+- [Flagship: Canonical Libraries (`libraries_105` & `libraries_104`)](#flagship-canonical-libraries-libraries_105--libraries_104)
+  - [Why Libraries Are the Flagship](#why-libraries-are-the-flagship)
+  - [Ecosystem Library Taxonomy](#ecosystem-library-taxonomy)
+  - [1. Core Family (`lib_bejson_Core_*`)](#1-core-family-lib_bejson_core_)
+  - [2. Graphics Family (`lib_bejson_Graphics_*`)](#2-graphics-family-lib_bejson_graphics_)
+  - [3. Diagrams Family (`lib_bejson_Diagrams_*`)](#3-diagrams-family-lib_bejson_diagrams_)
+  - [4. Canvas Family (`lib_bejson_Canvas_*`)](#4-canvas-family-lib_bejson_canvas_)
+  - [5. Taxonomies & Scaffolds (`lib_bejson_Taxonomies_*`)](#5-taxonomies--scaffolds-lib_bejson_taxonomies_)
+  - [6. CMS Family (`lib_bejson_CMS_*`)](#6-cms-family-lib_bejson_cms_)
+  - [Polyglot Support: TypeScript, JavaScript & Shell](#polyglot-support-typescript-javascript--shell)
+- [Authentic Schema Specifications & Data Models](#authentic-schema-specifications--data-models)
+  - [1. Diagram Schema Architecture (MFDB-132 Specification)](#1-diagram-schema-architecture-mfdb-132-specification)
+  - [2. Animation Schema Architecture (Row-Per-Frame 105a Specification)](#2-animation-schema-architecture-row-per-frame-105a-specification)
+  - [3. Canvas Config Schema Specification](#3-canvas-config-schema-specification)
+- [Practical Code Patterns & API Usage](#practical-code-patterns--api-usage)
+  - [Pattern 1: Initializing a 105 Store with UUIDv4 Identity](#pattern-1-initializing-a-105-store-with-uuidv4-identity)
+  - [Pattern 2: Querying & Mutating via O(1) Field Map Cache](#pattern-2-querying--mutating-via-o1-field-map-cache)
+  - [Pattern 3: Multi-File Database (MFDB) Federation](#pattern-3-multi-file-database-mfdb-federation)
+  - [Pattern 4: Compiling Multi-Frame Animations via Graphics Core](#pattern-4-compiling-multi-frame-animations-via-graphics-core)
+  - [Pattern 5: Diagram Serialization & MFDB-132 Packaging](#pattern-5-diagram-serialization--mfdb-132-packaging)
 - [Core Architectural Pillars](#core-architectural-pillars)
   - [BEJSON 104a & 105 Format Matrix](#bejson-104a--105-format-matrix)
   - [Multi-File Database (MFDB)](#multi-file-database-mfdb)
@@ -33,8 +54,8 @@
   - [3. Autonomous Agent Platform](#3-autonomous-agent-platform-newagent)
   - [4. Project Portfolio Governor](#4-project-portfolio-governor-project_manager)
   - [5. Standalone Launch Reminders](#5-standalone-launch-reminders-reminder_tool)
-  - [6. Standard Development Libraries](#6-standard-development-libraries-libraries_104--libraries_105)
 - [Cubic Architecture Visual Anchors](#cubic-architecture-visual-anchors)
+- [System Error Registry & Quality Gates](#system-error-registry--quality-gates)
 - [Technical Specifications & Storage Standards](#technical-specifications--storage-standards)
 - [Author & Verification](#author--verification)
 
@@ -166,6 +187,446 @@ The BEJSON autonomous architecture coordinates workloads across four determinist
 
 ---
 
+## Flagship: Canonical Libraries (`libraries_105` & `libraries_104`)
+
+> **"My libraries are my flagships."**
+> Applications, CLIs, and autonomous agents are temporal user-interfaces; the underlying development libraries represent the permanent, mathematically proven foundation of the entire ecosystem.
+
+The BEJSON standard libraries (currently shipping at **Release_Version 300** and **Format 105**) provide high-speed persistence, cryptographic verification, vector rendering, multi-file relational joins, and strict schema validation across standard Python, TypeScript, JavaScript, and POSIX Shell environments.
+
+```
++-----------------------------------------------------------------------------------------+
+|                              CANONICAL LIBRARY ECOSYSTEM                                |
++----------------------------+----------------------------+-------------------------------+
+|  1. CORE FAMILY            |  2. GRAPHICS & CANVAS      |  3. DIAGRAMS FAMILY           |
+|  - bejson_core (v3.6.0)    |  - graphics_core (v1.1.0)  |  - diagrams_core (v1.2.0)     |
+|  - mfdb_core (v1.40)       |  - graphics_schemas        |  - diagrams_validator         |
+|  - bejson_validator        |  - canvas_templates        |  - diagrams_ai                |
+|  - bejson_upgrade          |  - canvas_schemas          |  - diagrams_cli_tools         |
+|  - bejson_core_nesting     |  - blank_slate_stages      |  - mfdb132_packaging          |
+|  - bejson_chunking         |  - template_registries     |  - board_connector_territory  |
++----------------------------+----------------------------+-------------------------------+
+|  4. TAXONOMY & SCAFFOLDS   |  5. CMS RUNTIME FAMILY     |  6. POLYGLOT CORE             |
+|  - schema_taxonomies       |  - cms_core                |  - Lib_TS (TypeScript Core)   |
+|  - tax_scaffolds_core      |  - cms_content_safety      |  - Lib_JS (Web Crypto Node)   |
+|  - entity_naming_rules     |  - cms_static_compiler     |  - Lib_SH (POSIX Shell CLI)   |
++----------------------------+----------------------------+-------------------------------+
+```
+
+### Ecosystem Library Taxonomy
+
+Every module in the ecosystem adheres to a strict 4-part name token convention:
+`lib_<Ecosystem>_<Family>_<Module>.py` (e.g. `lib_bejson_Core_bejson_core.py`, `lib_bejson_Graphics_graphics_core.py`, `lib_bejson_Diagrams_diagrams_core.py`).
+
+#### 1. Core Family (`lib_bejson_Core_*`)
+The kernel of the ecosystem. Operates with zero third-party dependencies:
+- **`lib_bejson_Core_bejson_core.py` (v3.6.0)**:
+  - Low-level atomic file operations via `bejson_core_atomic_write` using tempfile buffers and atomic rename guards.
+  - Self-validating, self-maintaining $O(1)$ Field Map Cache with live document layout fingerprints.
+  - Format 105 UUIDv4 primary identity minting per record (`bejson_core_add_record_105`).
+  - Dual-key coordinate-healing cell writes (`bejson_core_write_cell`).
+  - Strict type checking for `string`, `integer`, `number`, `boolean`, and `array` primitives.
+- **`lib_bejson_Core_mfdb_core.py` (v1.40)**:
+  - Multi-File Database coordinator. Loads and verifies manifests (`104a.mfdb.bejson` and `105a.mfdb.bejson`).
+  - Cross-entity relational cascades (`ON DELETE CASCADE`, `ON DELETE SET NULL`, `ON DELETE RESTRICT`).
+  - In-memory relational joins across physically partitioned JSON files.
+- **`lib_bejson_Core_bejson_validator.py`**:
+  - Deterministic AST and structural conformance testing against error codes `E01`–`E95`.
+  - Verifies header metadata, column lengths, type homogeneity, and foreign-key references.
+- **`lib_bejson_Core_bejson_upgrade.py`**:
+  - In-place atomic migration engine converting legacy Foundational 104 files to Integrity 105 with zero downtime.
+- **`lib_bejson_Core_bejson_core_nesting.py`**:
+  - Recursive nesting engine supporting embedded BEJSON tables inside table cells up to depth 16.
+- **`lib_bejson_Core_bejson_chunking.py`**:
+  - Unified codebase packaging engine serializing whole repositories into high-density `.104a.bejson` text chunks for AI contexts.
+
+#### 2. Graphics Family (`lib_bejson_Graphics_*`)
+Dynamic vector stage automation and timeline animation:
+- **`lib_bejson_Graphics_graphics_core.py` (v1.1.0)**:
+  - Native Playwright SVG capture engine with ARM64 Android Termux optimizations.
+  - Row-per-frame animation controller (`create_row_per_frame_animation_105a`).
+  - Procedural 3D isometric cube engine (`create_isometric_cube_svg`) supporting all 5 visual anchors (`104`, `104a_floating`, `104db_pillar`, `104_nested`, `mfdb_federation`).
+- **`lib_bejson_Graphics_graphics_schemas.py`**:
+  - Authoritative 105a field definitions with permanent UUIDv4 fingerprints:
+    - `GRAPHIC_CANVAS_CONFIG_FIELDS` (12 fields)
+    - `GRAPHIC_ROW_FRAME_FIELDS` (9 fields)
+    - `GRAPHIC_ANIMATION_TIMELINE_FIELDS` (9 fields)
+- **`lib_bejson_Graphics_graphics_canvas_templates.py`**:
+  - 11 pre-quantized blank-slate canvas templates (Square 800x800, Banner 840x420, Widescreen 1280x720, Hero 1280x640, Portrait 720x1280, Icon 512x512).
+- **`canvas_templates_registry.105a.bejson`**:
+  - 363 KB master manifest indexing all production canvas stages and stage selector contracts.
+
+#### 3. Diagrams Family (`lib_bejson_Diagrams_*`)
+The authoritative diagram modeling, serialization, and validation ecosystem:
+- **`lib_bejson_Diagrams_diagrams_core.py` (v1.2.0)**:
+  - Canonical diagram entity definitions: `BOARD_BASE_FIELDS`, `CONNECTOR_BASE_FIELDS`, `TERRITORY_BASE_FIELDS`, and `SHAPE_BASE_FIELDS`.
+  - MFDB-132 container packaging (`diagrams_core_create_mfdb132_package_from_model`) and extraction (`diagrams_core_extract_diagram_model_from_mfdb132`).
+  - Flow value validators (`forward`, `backward`, `bidirectional`, `none`).
+- **`lib_bejson_Diagrams_diagrams_validator.py`**:
+  - Pre-validation (`validatePlanSemantics`): ID uniqueness, size class enums, kind enums.
+  - Post-assembly verification (`validateDiagram`): 40px bounding box clearance, foreign key resolution, cyclic hierarchy prevention.
+  - Auto-remediation (`remediateDiagram`): Purges dangling connectors and quantizes coordinates to 50px increments.
+- **`lib_bejson_Diagrams_diagrams_ai.py`**:
+  - Zero-SDK REST integration generating valid diagram models from natural-language prompts.
+
+#### 4. Canvas Family (`lib_bejson_Canvas_*`)
+Geometric mathematics and procedural rendering:
+- **`lib_bejson_Canvas_canvas_schemas.py`**:
+  - Spatial coordinate definitions and viewbox transformation matrices.
+- **`lib_bejson_Canvas_canvas_templates.py`**:
+  - Repeating procedural pattern generators (Isometric Cube 128px, Circuit Grid 64px, Checkerboard 64px).
+
+#### 5. Taxonomies & Scaffolds (`lib_bejson_Taxonomies_*`)
+Standardization governance across data models:
+- Enforces strict `<hierarchy>_<group>_<purpose>` snake_case naming invariants.
+- Prohibits cryptic abbreviations (`tmp`, `val`, `res`, `arr`, `obj`, `data`) and single-letter identifiers.
+
+#### 6. CMS Family (`lib_bejson_CMS_*`)
+Zero-SQL content management primitives:
+- Provides atomic table drivers for `Pages`, `Posts`, `Categories`, `Media`, and `Navigation` models.
+- Includes integrated HTML sanitization and content safety filters.
+
+#### Polyglot Support: TypeScript, JavaScript & Shell
+- **`Lib_TS/Core`**: Full TypeScript declarations (`BEJSONDocument<T>`, `MFDBManifest`, `FieldMapCache`) guaranteeing 100% type safety.
+- **`Lib_JS/Core`**: Universal browser/Node.js implementation using the Web Crypto API for zero-dependency AES-GCM and SHA-256 operations.
+- **`Lib_SH/Core`**: Pure POSIX Shell / Bash utility library with embedded JSON validation using standard utilities (`jq` / `awk`).
+
+---
+
+## Authentic Schema Specifications & Data Models
+
+### 1. Diagram Schema Architecture (MFDB-132 Specification)
+
+A BEJSON diagram is modeled as an MFDB relational database comprising three core tables coordinated by a master manifest:
+
+#### Master Manifest (`104a.mfdb.bejson`)
+```json
+{
+  "Header": {
+    "Database_Name": "system_architecture_diagram",
+    "Format": "104a.mfdb",
+    "Version": "1.31",
+    "Author": "Elton Boehnen",
+    "Relational_ID": "c9f8e7d6-c5b4-4321-8765-43210fe98765"
+  },
+  "Entities": [
+    {
+      "name": "Board",
+      "file": "Board.104.bejson",
+      "primary_key": "shape_id",
+      "record_count": 4
+    },
+    {
+      "name": "Connector",
+      "file": "Connector.104.bejson",
+      "primary_key": "conn_id",
+      "record_count": 3
+    },
+    {
+      "name": "Territory",
+      "file": "Territory.104.bejson",
+      "primary_key": "terr_id",
+      "record_count": 1
+    }
+  ]
+}
+```
+
+#### Board Entity Schema (`BOARD_BASE_FIELDS`)
+```json
+{
+  "Header": {
+    "Table_Name": "Board",
+    "Format": "104",
+    "Record_Count": 4
+  },
+  "Fields": [
+    "shape_id",
+    "shape_entity_name",
+    "shape_cx",
+    "shape_cy",
+    "shape_size_class",
+    "shape_kind",
+    "shape_parent_fk",
+    "shape_collapsed"
+  ],
+  "Data": [
+    ["shape_01", "Schema_Registry",    150, 270, "medium", "rect", null, false],
+    ["shape_02", "O1_Cache_Engine",    370, 270, "medium", "rect", null, false],
+    ["shape_03", "MFDB_Persistence",   590, 270, "medium", "rect", null, false],
+    ["shape_04", "Autonomous_Routers", 810, 270, "medium", "rect", null, false]
+  ]
+}
+```
+
+#### Connector Entity Schema (`CONNECTOR_BASE_FIELDS`)
+```json
+{
+  "Header": {
+    "Table_Name": "Connector",
+    "Format": "104",
+    "Record_Count": 3
+  },
+  "Fields": [
+    "conn_id",
+    "conn_from_fk",
+    "conn_to_fk",
+    "conn_flow"
+  ],
+  "Data": [
+    ["conn_01_02", "shape_01", "shape_02", "forward"],
+    ["conn_02_03", "shape_02", "shape_03", "forward"],
+    ["conn_03_04", "shape_03", "shape_04", "forward"]
+  ]
+}
+```
+
+### 2. Animation Schema Architecture (Row-Per-Frame 105a Specification)
+
+In `lib_bejson_Graphics_graphics_schemas.py`, a multi-frame animation sequence is declared as an Integrity Era 105a table where every record represents a single discrete rendering frame:
+
+```json
+{
+  "Header": {
+    "Table_Name": "pulse_cube_animation",
+    "Format": "105a",
+    "Record_Count": 24,
+    "Author": "Elton Boehnen",
+    "Relational_ID": "9b2c3d4e-2222-4000-8000-000000000000",
+    "Duration_Sec": 2.0,
+    "FPS": 12,
+    "Width_Px": 960,
+    "Height_Px": 540
+  },
+  "Fields": [
+    {"name": "frame_index",      "type": "integer", "field_uuid": "9b2c3d4e-2222-4000-8000-000000000001"},
+    {"name": "timestamp_sec",    "type": "number",  "field_uuid": "9b2c3d4e-2222-4000-8000-000000000002"},
+    {"name": "seek_progress",    "type": "number",  "field_uuid": "9b2c3d4e-2222-4000-8000-000000000003"},
+    {"name": "fps",              "type": "integer", "field_uuid": "9b2c3d4e-2222-4000-8000-000000000004"},
+    {"name": "frame_filename",   "type": "string",  "field_uuid": "9b2c3d4e-2222-4000-8000-000000000005"},
+    {"name": "svg_markup",       "type": "string",  "field_uuid": "9b2c3d4e-2222-4000-8000-000000000006"},
+    {"name": "frame_data_json",  "type": "string",  "field_uuid": "9b2c3d4e-2222-4000-8000-000000000007"},
+    {"name": "is_rendered",      "type": "boolean", "field_uuid": "9b2c3d4e-2222-4000-8000-000000000008"},
+    {"name": "checksum_sha256",  "type": "string",  "field_uuid": "9b2c3d4e-2222-4000-8000-000000000009"}
+  ],
+  "Data": [
+    [
+      "a1b2c3d4-0000-4000-8000-000000000001",
+      0,
+      0.000,
+      0.000,
+      12,
+      "frame_0000.png",
+      "<svg>...</svg>",
+      "{\"y_float\": 0.0, \"pulse\": 1.0}",
+      true,
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    [
+      "a1b2c3d4-0000-4000-8000-000000000002",
+      1,
+      0.083,
+      0.041,
+      12,
+      "frame_0001.png",
+      "<svg>...</svg>",
+      "{\"y_float\": -5.5, \"pulse\": 0.95}",
+      true,
+      "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    ]
+  ]
+}
+```
+
+### 3. Canvas Config Schema Specification
+
+The `GRAPHIC_CANVAS_CONFIG_FIELDS` contract standardizes stage configuration across all tools:
+
+| Field Name | Type | Permanent Field UUID | Purpose |
+|---|---|---|---|
+| `canvas_id` | `string` | `9a1b2c3d-1111-4000-8000-000000000001` | Unique stage instance identifier |
+| `template_name` | `string` | `9a1b2c3d-1111-4000-8000-000000000002` | Reference to blank-slate HTML template |
+| `stage_selector`| `string` | `9a1b2c3d-1111-4000-8000-000000000003` | CSS target DOM selector (`#stage-root`) |
+| `width_px` | `integer` | `9a1b2c3d-1111-4000-8000-000000000004` | Canvas horizontal pixel width |
+| `height_px` | `integer` | `9a1b2c3d-1111-4000-8000-000000000005` | Canvas vertical pixel height |
+| `aspect_ratio` | `string` | `9a1b2c3d-1111-4000-8000-000000000006` | Ratio invariant (`1:1`, `16:9`, `2:1`) |
+| `bg_theme` | `string` | `9a1b2c3d-1111-4000-8000-000000000007` | Canvas theme (`dark_obsidian`, `light_white`) |
+| `accent_color` | `string` | `9a1b2c3d-1111-4000-8000-000000000008` | Primary accent color (`#DE2626`) |
+| `device_scale` | `integer` | `9a1b2c3d-1111-4000-8000-000000000009` | Device pixel ratio (1 for 1x, 2 for Retina) |
+| `output_dir` | `string` | `9a1b2c3d-1111-4000-8000-000000000010` | Destination frame export folder |
+| `text_overlays_json`|`string`| `9a1b2c3d-1111-4000-8000-000000000011`| Serialized list of text overlays |
+| `remove_frame_source`|`boolean`|`9a1b2c3d-1111-4000-8000-000000000012`| Auto-cleanup temp SVG frames on render |
+
+---
+
+## Practical Code Patterns & API Usage
+
+### Pattern 1: Initializing a 105 Store with UUIDv4 Identity
+
+```python
+from lib_bejson_Core_bejson_core import (
+    bejson_core_create_document,
+    bejson_core_define_field,
+    bejson_core_add_record_105,
+    bejson_core_atomic_write,
+)
+
+# 1. Initialize Format 105 document
+doc = bejson_core_create_document(
+    table_name="telemetry_metrics",
+    format_version="105",
+    author="Elton Boehnen"
+)
+
+# 2. Define schema fields with eager validation
+bejson_core_define_field(doc, field_name="metric_name", field_type="string")
+bejson_core_define_field(doc, field_name="metric_value", field_type="number")
+bejson_core_define_field(doc, field_name="is_active", field_type="boolean")
+
+# 3. Add record: automatically mints UUIDv4 at column 0
+record_uuid = bejson_core_add_record_105(
+    doc,
+    values=["cpu_utilization_ratio", 0.42, True]
+)
+
+# 4. Atomic write guarantee
+bejson_core_atomic_write(doc, "data/telemetry_metrics.105.bejson")
+```
+
+### Pattern 2: Querying & Mutating via O(1) Field Map Cache
+
+```python
+from lib_bejson_Core_bejson_core import (
+    bejson_core_load_file,
+    bejson_core_get_field_map,
+    bejson_core_write_cell,
+    bejson_core_atomic_write,
+)
+
+# Load document: Field map cache is automatically warmed on ingestion
+doc = bejson_core_load_file("data/telemetry_metrics.105.bejson")
+field_map = bejson_core_get_field_map(doc)
+
+# Instantaneous lookups across thousands of records
+val_idx = field_map["metric_value"]
+for row in doc["Data"]:
+    if row[val_idx] > 0.80:
+        print(f"High utilization: {row[val_idx]}")
+
+# Dual-key cell mutation: self-healing against coordinate shifts
+bejson_core_write_cell(
+    doc,
+    row_idx=0,
+    field_identifier="metric_value",
+    new_value=0.55
+)
+bejson_core_atomic_write(doc, "data/telemetry_metrics.105.bejson")
+```
+
+### Pattern 3: Multi-File Database (MFDB) Federation
+
+```python
+from lib_bejson_Core_mfdb_core import (
+    mfdb_core_create_database,
+    mfdb_core_register_entity,
+    mfdb_core_query_relation,
+)
+
+# Initialize master manifest (104a.mfdb.bejson)
+mfdb_core_create_database(
+    db_name="company_mfdb",
+    author="Elton Boehnen",
+    db_root="data/mfdb"
+)
+
+# Register entity tables
+mfdb_core_register_entity(
+    db_root="data/mfdb",
+    entity_name="Departments",
+    table_filename="Departments.104.bejson",
+    primary_key="dept_id"
+)
+mfdb_core_register_entity(
+    db_root="data/mfdb",
+    entity_name="Employees",
+    table_filename="Employees.104.bejson",
+    primary_key="emp_id",
+    foreign_keys=[{"field": "dept_fk", "target_entity": "Departments", "on_delete": "CASCADE"}]
+)
+```
+
+### Pattern 4: Compiling Multi-Frame Animations via Graphics Core
+
+```python
+from lib_bejson_Graphics_graphics_core import (
+    create_row_per_frame_animation_105a,
+    create_isometric_cube_svg,
+    render_animation_to_gif,
+)
+
+# 1. Initialize 24-frame animation controller
+anim_doc = create_row_per_frame_animation_105a(
+    animation_name="cube_rotation",
+    duration_sec=2.0,
+    fps=12,
+    width_px=960,
+    height_px=540
+)
+
+# 2. Populate frames with procedural vector geometry
+for frame_i in range(24):
+    progress = frame_i / 24.0
+    svg = create_isometric_cube_svg(
+        viewbox_size=540,
+        cube_style="104a_floating",
+        pulse_intensity=1.0 + (0.3 * progress)
+    )
+    # Append frame record with progress telemetry
+    anim_doc["Data"].append([
+        f"frame_{frame_i:04d}",
+        frame_i,
+        progress * 2.0,
+        progress,
+        12,
+        f"frame_{frame_i:04d}.png",
+        svg,
+        "{}",
+        False,
+        ""
+    ])
+
+# 3. Render directly to animated GIF using native Playwright and Pillow
+render_animation_to_gif(anim_doc, output_path="assets/cube_rotation.gif")
+```
+
+### Pattern 5: Diagram Serialization & MFDB-132 Packaging
+
+```python
+from lib_bejson_Diagrams_diagrams_core import (
+    diagrams_core_create_mfdb132_package_from_model,
+    diagrams_core_extract_diagram_model_from_mfdb132,
+)
+
+diagram_model = {
+    "diagramId": "diag_01",
+    "name": "Service Architecture",
+    "shapes": [
+        {"id": "n1", "label": "API Gateway", "cx": 200, "cy": 150, "kind": "rect", "color": "#181820"},
+        {"id": "n2", "label": "Auth Service", "cx": 500, "cy": 150, "kind": "rect", "color": "#DE2626"}
+    ],
+    "connectors": [
+        {"id": "c1", "from": "n1", "to": "n2", "flow": "forward"}
+    ],
+    "territories": []
+}
+
+# Pack entire diagram into a single-file portable MFDB-132 container
+pkg_bytes = diagrams_core_create_mfdb132_package_from_model(diagram_model)
+Path("service_architecture.mfdb132.bejson").write_bytes(pkg_bytes)
+```
+
+---
+
 ## Core Architectural Pillars
 
 ### BEJSON 104a & 105 Format Matrix
@@ -274,14 +735,6 @@ All visual assets, presentation stages, web interfaces, and terminal outputs enf
   - Priority levels (`urgent`, `high`, `normal`), due date tracking, and automated completion archiving.
   - Strict 57-column ANSI formatted display with color-coded badges and sub-10ms startup latency.
 
-### 6. Standard Development Libraries (`libraries_104` & `libraries_105`)
-- **Role**: Foundational Python standard libraries powering all BEJSON data access, validation, and mutation.
-- **Components**:
-  - `bejson_core`: High-speed row manipulation and field map caching.
-  - `bejson_validator`: Conformance verification against 104 and 105 schema invariants.
-  - `mfdb_core`: Relational multi-file joins, foreign key cascade enforcement, and manifest locking.
-  - `bejson_crypto`: AES-GCM encryption and SHA-256 record ledger digest generation.
-
 ---
 
 ## Cubic Architecture Visual Anchors
@@ -305,6 +758,23 @@ The visual identity of the ecosystem is governed by the **3D Isometric Cube** vi
 
 ---
 
+## System Error Registry & Quality Gates
+
+The `lib_bejson_Core_bejson_errors.py` and `lib_bejson_Diagrams_bejson_errors.py` modules standardize error codes across all ecosystem platforms:
+
+| Error Code Range | Subsystem Category | Invariant Enforced | Failure Remediation |
+|---|---|---|---|
+| `E01` – `E09` | Document Root & Header | Valid JSON syntax, Header dict existence, Format tag | Re-parse raw text, reconstruct Header block |
+| `E10` – `E19` | Fields Schema Array | Array shape, string names, no duplicate field names | Strip whitespace, deduplicate identifiers |
+| `E20` – `E29` | Tabular Data Rows | Matrix consistency: `len(row) == len(Fields)` | Pad missing columns or reject corrupt row |
+| `E30` – `E39` | Type Conformance | Primitive validation (`string`, `integer`, `number`, `boolean`)| Coerce types or reject malformed values |
+| `E40` – `E49` | MFDB Manifests | `104a.mfdb.bejson` root presence, valid entity list | Regenerate manifest from filesystem scan |
+| `E50` – `E59` | Referential Integrity | Foreign key target existence (`fk_target_entity`) | Apply `ON DELETE CASCADE` or block write |
+| `E90` – `E95` | Format 105 Integrity | Valid UUIDv4 at column 0, matching SHA-256 hash | Re-mint UUID or flag ledger tampering |
+| `E_DIAG_01` – `10`| Diagram Surface Geometry | 50px grid snap, 40px bounding clearance, valid flow | Auto-quantize coordinates, purge dead links |
+
+---
+
 ## Technical Specifications & Storage Standards
 
 ```
@@ -312,6 +782,7 @@ Standard Parameter         Specification
 -------------------------  -------------------------------------------------------------
 Substrate Operating System Linux (x86_64 / ARM64), Android Termux (Bionic libc)
 Core Programming Language  Python 3.10+ (Standard Library Centric)
+Polyglot Runtimes          TypeScript (Node.js/Bun), JavaScript (Web Crypto), POSIX Bash
 Data Interchange Standard  BEJSON 104a (Tabular Rows) & Format 105 (UUIDv4 Hash Chains)
 Database Paradigms         MFDB (Multi-File Flat-File Databases, Zero-SQL)
 Terminal Geometry          57-Column Mobile Portrait Ceiling
