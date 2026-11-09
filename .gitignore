@@ -16,3 +16,13 @@ dev/temp_*/
 # OS artifacts
 .DS_Store
 Thumbs.db
+
+# Logs & transcripts
+*.log
+*.log.*
+logs/
+log/
+Global_Logs/
+Log-*.bejson
+*.jsonl
+
