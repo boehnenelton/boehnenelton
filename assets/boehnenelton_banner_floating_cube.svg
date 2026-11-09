@@ -1,0 +1,25 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="640" fill="#0A0A0C" />
+  <rect x="48" y="48" width="1184" height="544" rx="0" fill="none" stroke="#1A1A22" stroke-width="1.5" />
+  <path d="M 48 76 L 48 48 L 76 48" fill="none" stroke="#333340" stroke-width="2" />
+  <path d="M 1204 48 L 1232 48 L 1232 76" fill="none" stroke="#333340" stroke-width="2" />
+  <path d="M 48 564 L 48 592 L 76 592" fill="none" stroke="#333340" stroke-width="2" />
+  <path d="M 1204 592 L 1232 592 L 1232 564" fill="none" stroke="#333340" stroke-width="2" />
+  <rect x="48" y="270" width="4" height="100" rx="0" fill="#DE2626" />
+
+  <g transform="translate(260, 320)">
+    <!-- Floating Top 3D Cube (Format 104a) -->
+    <g transform="translate(0, 0)">
+      <!-- Hovering Diamond Cap -->
+      <polygon points="0,-72 56,-42 0,-12 -56,-42" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round" />
+      <polygon points="0,-60 40,-39 0,-18 -40,-39" fill="#0A0A0C" />
+      <!-- Lower Body Base -->
+      <polygon points="-56,-24 0,6 0,66 -56,36" fill="#181820" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round" />
+      <polygon points="0,6 56,-24 56,36 0,66" fill="#DE2626" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round" />
+      <polygon points="0,6 -42,-16 0,-38 42,-16" fill="#101016" stroke="#333344" stroke-width="1" />
+    </g>
+    <line x1="104" y1="-64" x2="104" y2="84" stroke="#DE2626" stroke-width="3" />
+    <text x="144" y="16" fill="#FFFFFF" font-size="62" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" letter-spacing="1.5">boehnenelton</text>
+    <text x="146" y="52" fill="#888896" font-size="14" font-family="monospace" font-weight="600" letter-spacing="3">FORMAT 104a // HIGH-PERFORMANCE DATA MATRIX</text>
+  </g>
+</svg>

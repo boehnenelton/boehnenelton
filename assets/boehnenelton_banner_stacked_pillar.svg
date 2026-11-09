@@ -1,0 +1,25 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="640" fill="#0A0A0C" />
+  <rect x="48" y="48" width="1184" height="544" rx="0" fill="none" stroke="#1A1A22" stroke-width="1.5" />
+  <path d="M 48 76 L 48 48 L 76 48" fill="none" stroke="#333340" stroke-width="2" />
+  <path d="M 1204 48 L 1232 48 L 1232 76" fill="none" stroke="#333340" stroke-width="2" />
+  <path d="M 48 564 L 48 592 L 76 592" fill="none" stroke="#333340" stroke-width="2" />
+  <path d="M 1204 592 L 1232 592 L 1232 564" fill="none" stroke="#333340" stroke-width="2" />
+  <rect x="48" y="270" width="4" height="100" rx="0" fill="#DE2626" />
+
+  <g transform="translate(260, 320)">
+    <!-- Stacked Pillar Dual Cubes (Format 104db / MFDB) -->
+    <g transform="translate(0, 0)">
+      <!-- Top Cube -->
+      <polygon points="0,-72 48,-46 0,-20 -48,-46" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round" />
+      <polygon points="-48,-46 0,-20 0,22 -48,-4" fill="#20202A" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round" />
+      <polygon points="0,-20 48,-46 48,-4 0,22" fill="#DE2626" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round" />
+      <!-- Bottom Cube -->
+      <polygon points="-48,2 0,28 0,70 -48,44" fill="#14141C" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round" />
+      <polygon points="0,28 48,2 48,44 0,70" fill="#991B1B" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round" />
+    </g>
+    <line x1="104" y1="-64" x2="104" y2="84" stroke="#DE2626" stroke-width="3" />
+    <text x="144" y="16" fill="#FFFFFF" font-size="62" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" letter-spacing="1.5">boehnenelton</text>
+    <text x="146" y="52" fill="#888896" font-size="14" font-family="monospace" font-weight="600" letter-spacing="3">MFDB ARCHITECTURE // RELATIONAL PERSISTENCE</text>
+  </g>
+</svg>

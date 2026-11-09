@@ -1,0 +1,22 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="640" fill="#0A0A0C" />
+  <rect x="48" y="48" width="1184" height="544" rx="0" fill="none" stroke="#1A1A22" stroke-width="1.5" />
+  <path d="M 48 76 L 48 48 L 76 48" fill="none" stroke="#333340" stroke-width="2" />
+  <path d="M 1204 48 L 1232 48 L 1232 76" fill="none" stroke="#333340" stroke-width="2" />
+  <path d="M 48 564 L 48 592 L 76 592" fill="none" stroke="#333340" stroke-width="2" />
+  <path d="M 1204 592 L 1232 592 L 1232 564" fill="none" stroke="#333340" stroke-width="2" />
+  <rect x="48" y="270" width="4" height="100" rx="0" fill="#DE2626" />
+
+  <g transform="translate(260, 320)">
+    <!-- 3D Open Isometric Cube (Format 104) -->
+    <g transform="translate(0, 0)">
+      <polygon points="0,-48 56,-18 0,12 -56,-18" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round" />
+      <polygon points="0,-36 40,-15 0,6 -40,-15" fill="#0A0A0C" />
+      <polygon points="-56,-18 0,12 0,72 -56,42" fill="#181820" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round" />
+      <polygon points="0,12 56,-18 56,42 0,72" fill="#DE2626" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round" />
+    </g>
+    <line x1="104" y1="-64" x2="104" y2="84" stroke="#DE2626" stroke-width="3" />
+    <text x="144" y="16" fill="#FFFFFF" font-size="62" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" letter-spacing="1.5">boehnenelton</text>
+    <text x="146" y="52" fill="#888896" font-size="14" font-family="monospace" font-weight="600" letter-spacing="3">SYSTEMS ARCHITECT // BEJSON &amp; AUTONOMOUS ENGINES</text>
+  </g>
+</svg>
