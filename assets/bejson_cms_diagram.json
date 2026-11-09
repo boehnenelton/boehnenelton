@@ -1,0 +1,212 @@
+{
+  "diagramId": "bejson_cms_flagship_arch",
+  "name": "BEJSON CMS Flagship Architecture",
+  "description": "End-to-end architecture of BEJSON CMS: Flask web services, CLI management, MFDB flat-file persistence, BKS-1 AI authoring, Graphics 105 asset triad, and static HTML compilation.",
+  "territories": [
+    {
+      "id": "zone_services",
+      "kind": "rect",
+      "cx": 260,
+      "cy": 360,
+      "size": 440,
+      "label": "1. Web Services & CLI Tier",
+      "color": "#DE2626"
+    },
+    {
+      "id": "zone_mfdb",
+      "kind": "rect",
+      "cx": 780,
+      "cy": 360,
+      "size": 440,
+      "label": "2. MFDB Storage & Static Build",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "zone_ai_graphics",
+      "kind": "rect",
+      "cx": 1300,
+      "cy": 360,
+      "size": 440,
+      "label": "3. BKS-1 AI & Graphics 105",
+      "color": "#DE2626"
+    }
+  ],
+  "shapes": [
+    {
+      "id": "cms_cli",
+      "label": "cms-manage.py CLI",
+      "text": "Unified 57-col CLI router & automation",
+      "kind": "rect",
+      "sizeClass": "medium",
+      "color": "#181820",
+      "fontColor": "#ffffff",
+      "cx": 260,
+      "cy": 200,
+      "parentId": null
+    },
+    {
+      "id": "cms_admin",
+      "label": "BEJSON_CMS_Admin :5000",
+      "text": "Site master, navigation & media console",
+      "kind": "rect",
+      "sizeClass": "medium",
+      "color": "#181820",
+      "fontColor": "#ffffff",
+      "cx": 260,
+      "cy": 360,
+      "parentId": "cms_cli"
+    },
+    {
+      "id": "cms_editor",
+      "label": "BEJSON_CMS_PageEditor :5002",
+      "text": "Authoritative page editor & BKS studio",
+      "kind": "rect",
+      "sizeClass": "medium",
+      "color": "#181820",
+      "fontColor": "#ffffff",
+      "cx": 260,
+      "cy": 520,
+      "parentId": "cms_admin"
+    },
+    {
+      "id": "mfdb_master",
+      "label": "104a.mfdb.bejson",
+      "text": "Master manifest, O(1) field map & locks",
+      "kind": "rect",
+      "sizeClass": "medium",
+      "color": "#181820",
+      "fontColor": "#ffffff",
+      "cx": 780,
+      "cy": 200,
+      "parentId": null
+    },
+    {
+      "id": "pages_db",
+      "label": "pagerecord & pages_db/",
+      "text": "Two-part page records + mediaasset ledger",
+      "kind": "rect",
+      "sizeClass": "medium",
+      "color": "#181820",
+      "fontColor": "#ffffff",
+      "cx": 780,
+      "cy": 360,
+      "parentId": "mfdb_master"
+    },
+    {
+      "id": "cms_publisher",
+      "label": "BEJSON_CMS_Publisher :5001",
+      "text": "Static HTML, RSS/Atom & asset compiler",
+      "kind": "rect",
+      "sizeClass": "medium",
+      "color": "#181820",
+      "fontColor": "#ffffff",
+      "cx": 780,
+      "cy": 520,
+      "parentId": "pages_db"
+    },
+    {
+      "id": "bks_engine",
+      "label": "BKS-1 Blog Job Engine",
+      "text": "4-part technical article plan & writer",
+      "kind": "rect",
+      "sizeClass": "medium",
+      "color": "#181820",
+      "fontColor": "#ffffff",
+      "cx": 1300,
+      "cy": 200,
+      "parentId": null
+    },
+    {
+      "id": "cli_ai_dispatch",
+      "label": "CLI_AI REST Dispatch",
+      "text": "Gemini Interactions API & multi-provider",
+      "kind": "rect",
+      "sizeClass": "medium",
+      "color": "#181820",
+      "fontColor": "#ffffff",
+      "cx": 1300,
+      "cy": 360,
+      "parentId": "bks_engine"
+    },
+    {
+      "id": "graphics_105",
+      "label": "Graphics 105 Triad",
+      "text": "1280x640 SVG + PNG + WebP hero & diagrams",
+      "kind": "rect",
+      "sizeClass": "medium",
+      "color": "#181820",
+      "fontColor": "#ffffff",
+      "cx": 1300,
+      "cy": 520,
+      "parentId": "bks_engine"
+    }
+  ],
+  "connectors": [
+    {
+      "id": "c1",
+      "from": "cms_cli",
+      "to": "cms_admin",
+      "flow": "forward"
+    },
+    {
+      "id": "c2",
+      "from": "cms_admin",
+      "to": "cms_editor",
+      "flow": "bidirectional"
+    },
+    {
+      "id": "c3",
+      "from": "cms_cli",
+      "to": "mfdb_master",
+      "flow": "forward"
+    },
+    {
+      "id": "c4",
+      "from": "cms_admin",
+      "to": "pages_db",
+      "flow": "bidirectional"
+    },
+    {
+      "id": "c5",
+      "from": "cms_editor",
+      "to": "pages_db",
+      "flow": "bidirectional"
+    },
+    {
+      "id": "c6",
+      "from": "mfdb_master",
+      "to": "pages_db",
+      "flow": "forward"
+    },
+    {
+      "id": "c7",
+      "from": "pages_db",
+      "to": "cms_publisher",
+      "flow": "forward"
+    },
+    {
+      "id": "c8",
+      "from": "cms_editor",
+      "to": "bks_engine",
+      "flow": "forward"
+    },
+    {
+      "id": "c9",
+      "from": "bks_engine",
+      "to": "cli_ai_dispatch",
+      "flow": "bidirectional"
+    },
+    {
+      "id": "c10",
+      "from": "bks_engine",
+      "to": "graphics_105",
+      "flow": "forward"
+    },
+    {
+      "id": "c11",
+      "from": "graphics_105",
+      "to": "pages_db",
+      "flow": "forward"
+    }
+  ]
+}

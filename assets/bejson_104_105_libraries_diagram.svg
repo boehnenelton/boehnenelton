@@ -1,0 +1,73 @@
+<svg id="diagram-stage" viewBox="0 0 1280 640" width="1280" height="640" xmlns="http://www.w3.org/2000/svg" style="background:#000000;width:100%;height:100%;display:block;">
+  <defs>
+    <!-- Arrow Markers -->
+    <marker id="arrow-forward" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#FFFFFF" />
+    </marker>
+    <marker id="arrow-active" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#DE2626" />
+    </marker>
+    <!-- Glow Filter for Active Nodes -->
+    <filter id="node-red-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+    <pattern id="diag-grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <circle cx="25" cy="25" r="1" fill="#181822" />
+    </pattern>
+  </defs>
+  <!-- Background Canvas Grid -->
+  <rect width="1280" height="640" fill="url(#diag-grid)" />
+  <!-- Main Viewport Transform Group -->
+  <g id="viewport-group" transform="translate(65.92, 55.04) scale(0.736)">
+    <rect x="40.0" y="140.0" width="440.0" height="440.0" rx="16" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1.5" stroke-dasharray="6,4" />
+    <text x="260.0" y="160.0" fill="#FFFFFF" fill-opacity="0.8" font-size="12" font-family="monospace" letter-spacing="1.5" text-anchor="middle" font-weight="bold">FOUNDATIONAL ERA (LIBRARIES_104)</text>
+    <rect x="560.0" y="140.0" width="440.0" height="440.0" rx="16" fill="#DE2626" fill-opacity="0.04" stroke="#DE2626" stroke-opacity="0.25" stroke-width="1.5" stroke-dasharray="6,4" />
+    <text x="780.0" y="160.0" fill="#DE2626" fill-opacity="0.8" font-size="12" font-family="monospace" letter-spacing="1.5" text-anchor="middle" font-weight="bold">INTEGRITY ERA (LIBRARIES_105)</text>
+    <rect x="1080.0" y="140.0" width="440.0" height="440.0" rx="16" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1.5" stroke-dasharray="6,4" />
+    <text x="1300.0" y="160.0" fill="#FFFFFF" fill-opacity="0.8" font-size="12" font-family="monospace" letter-spacing="1.5" text-anchor="middle" font-weight="bold">FLAGSHIP RUNTIME PLATFORMS</text>
+    <!-- Connector lib104_core->lib104_ai_cms -->    <line x1="260.0" y1="200.0" x2="260.0" y2="360.0" stroke="#DE2626" stroke-width="2.5" stroke-opacity="1.0" marker-end="url(#arrow-active)" />
+    <circle cx="260.0" cy="217.76" r="5" fill="#DE2626" filter="url(#node-red-glow)" />
+    <!-- Connector lib104_core->lib104_html_diag -->    <line x1="260.0" y1="200.0" x2="260.0" y2="520.0" stroke="#DE2626" stroke-width="2.5" stroke-opacity="1.0" marker-end="url(#arrow-active)" />
+    <circle cx="260.0" cy="235.52" r="5" fill="#DE2626" filter="url(#node-red-glow)" />
+    <!-- Connector lib104_core->lib105_core -->    <line x1="260.0" y1="200.0" x2="780.0" y2="200.0" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.4" marker-end="url(#arrow-forward)" />
+    <!-- Connector lib105_core->lib105_graphics -->    <line x1="780.0" y1="200.0" x2="780.0" y2="360.0" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.4" marker-end="url(#arrow-forward)" />
+    <!-- Connector lib105_core->lib105_tax_std -->    <line x1="780.0" y1="200.0" x2="780.0" y2="520.0" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.4" marker-end="url(#arrow-forward)" />
+    <!-- Connector lib104_ai_cms->app_bejson_cms -->    <line x1="260.0" y1="360.0" x2="1300.0" y2="200.0" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.4" marker-end="url(#arrow-forward)" />
+    <!-- Connector lib105_graphics->app_bejson_cms -->    <line x1="780.0" y1="360.0" x2="1300.0" y2="200.0" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.4" marker-end="url(#arrow-forward)" />
+    <!-- Connector lib104_ai_cms->app_cli_ai -->    <line x1="260.0" y1="360.0" x2="1300.0" y2="360.0" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.4" marker-end="url(#arrow-forward)" />
+    <!-- Connector lib105_tax_std->app_newagent -->    <line x1="780.0" y1="520.0" x2="1300.0" y2="520.0" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.4" marker-end="url(#arrow-forward)" />
+    <!-- Shape lib104_core -->    <g id="shape-lib104_core" opacity="1.0">      <rect x="160.0" y="150.0" width="200" height="100" rx="8" fill="#1c0d0d" stroke="#DE2626" stroke-width="2.5" filter="url(#node-red-glow)" />      <text x="172.0" y="174.0" fill="#FFFFFF" font-size="12" font-family="-apple-system, sans-serif" font-weight="bold">104 Core & MFDB v1.31</text>
+      <text x="172.0" y="192.0" fill="#737373" font-size="10" font-family="-apple-system, sans-serif">O(1) Field Map Cache, 104/104a/104db...</text>
+      <circle cx="348.0" cy="162.0" r="4" fill="#DE2626" />
+    </g>
+    <!-- Shape lib104_ai_cms -->    <g id="shape-lib104_ai_cms" opacity="1.0">      <rect x="160.0" y="310.0" width="200" height="100" rx="8" fill="#1c0d0d" stroke="#DE2626" stroke-width="2.5" filter="url(#node-red-glow)" />      <text x="172.0" y="334.0" fill="#FFFFFF" font-size="12" font-family="-apple-system, sans-serif" font-weight="bold">104 AI, CMS & Writing</text>
+      <text x="172.0" y="352.0" fill="#737373" font-size="10" font-family="-apple-system, sans-serif">Interactions API, BKS-1, Chunker & P...</text>
+      <circle cx="348.0" cy="322.0" r="4" fill="#DE2626" />
+    </g>
+    <!-- Shape lib104_html_diag -->    <g id="shape-lib104_html_diag" opacity="1.0">      <rect x="160.0" y="470.0" width="200" height="100" rx="8" fill="#1c0d0d" stroke="#DE2626" stroke-width="2.5" filter="url(#node-red-glow)" />      <text x="172.0" y="494.0" fill="#FFFFFF" font-size="12" font-family="-apple-system, sans-serif" font-weight="bold">104 BEHTML, HTML & Diagrams</text>
+      <text x="172.0" y="512.0" fill="#737373" font-size="10" font-family="-apple-system, sans-serif">8-lane Ry=32px UI grids & Diagrammer...</text>
+      <circle cx="348.0" cy="482.0" r="4" fill="#DE2626" />
+    </g>
+    <!-- Shape lib105_core -->    <g id="shape-lib105_core" opacity="1.0">      <rect x="680.0" y="150.0" width="200" height="100" rx="8" fill="#121218" stroke="#FFFFFF" stroke-width="1.2"  />      <text x="692.0" y="174.0" fill="#FFFFFF" font-size="12" font-family="-apple-system, sans-serif" font-weight="bold">105 Core & MFDB v1.40</text>
+      <text x="692.0" y="192.0" fill="#737373" font-size="10" font-family="-apple-system, sans-serif">UUIDv4 record keys, SHA-256 & FK cas...</text>
+    </g>
+    <!-- Shape lib105_graphics -->    <g id="shape-lib105_graphics" opacity="1.0">      <rect x="680.0" y="310.0" width="200" height="100" rx="8" fill="#121218" stroke="#FFFFFF" stroke-width="1.2"  />      <text x="692.0" y="334.0" fill="#FFFFFF" font-size="12" font-family="-apple-system, sans-serif" font-weight="bold">105 Graphics & Canvas</text>
+      <text x="692.0" y="352.0" fill="#737373" font-size="10" font-family="-apple-system, sans-serif">Row-per-frame 105a timelines, SVG/GI...</text>
+    </g>
+    <!-- Shape lib105_tax_std -->    <g id="shape-lib105_tax_std" opacity="1.0">      <rect x="680.0" y="470.0" width="200" height="100" rx="8" fill="#121218" stroke="#FFFFFF" stroke-width="1.2"  />      <text x="692.0" y="494.0" fill="#FFFFFF" font-size="12" font-family="-apple-system, sans-serif" font-weight="bold">105 Standards & Taxonomies</text>
+      <text x="692.0" y="512.0" fill="#737373" font-size="10" font-family="-apple-system, sans-serif">MTV CMS scaffolds & schema registrie...</text>
+    </g>
+    <!-- Shape app_bejson_cms -->    <g id="shape-app_bejson_cms" opacity="1.0">      <rect x="1200.0" y="150.0" width="200" height="100" rx="8" fill="#121218" stroke="#FFFFFF" stroke-width="1.2"  />      <text x="1212.0" y="174.0" fill="#FFFFFF" font-size="12" font-family="-apple-system, sans-serif" font-weight="bold">BEJSON_CMS (Flagship)</text>
+      <text x="1212.0" y="192.0" fill="#737373" font-size="10" font-family="-apple-system, sans-serif">4-service publishing suite & static ...</text>
+    </g>
+    <!-- Shape app_cli_ai -->    <g id="shape-app_cli_ai" opacity="1.0">      <rect x="1200.0" y="310.0" width="200" height="100" rx="8" fill="#121218" stroke="#FFFFFF" stroke-width="1.2"  />      <text x="1212.0" y="334.0" fill="#FFFFFF" font-size="12" font-family="-apple-system, sans-serif" font-weight="bold">CLI_AI & Profile_Chat</text>
+      <text x="1212.0" y="352.0" fill="#737373" font-size="10" font-family="-apple-system, sans-serif">Stateful Interactions API & persiste...</text>
+    </g>
+    <!-- Shape app_newagent -->    <g id="shape-app_newagent" opacity="1.0">      <rect x="1200.0" y="470.0" width="200" height="100" rx="8" fill="#121218" stroke="#FFFFFF" stroke-width="1.2"  />      <text x="1212.0" y="494.0" fill="#FFFFFF" font-size="12" font-family="-apple-system, sans-serif" font-weight="bold">NewAgent & Management_Tool</text>
+      <text x="1212.0" y="512.0" fill="#737373" font-size="10" font-family="-apple-system, sans-serif">JobMaker state machine & 57-col CLI ...</text>
+    </g>
+    <!-- Inspector Card for lib104_core -->    <g id="inspector-lib104_core">      <rect x="130.0" y="90.0" width="260" height="90" rx="6" fill="#0a0a0e" stroke="#DE2626" stroke-width="1.5" filter="url(#node-red-glow)" />      <text x="142.0" y="112.0" fill="#DE2626" font-size="12" font-family="monospace" font-weight="bold">INSPECT: lib104_core</text>      <text x="142.0" y="130.0" fill="#FFFFFF" font-size="11" font-family="-apple-system, sans-serif" font-weight="bold">104 Core & MFDB v1.31</text>      <text x="142.0" y="148.0" fill="#737373" font-size="9" font-family="-apple-system, sans-serif">O(1) Field Map Cache, 104/104a/104db CRUD</text>    </g>
+  </g>
+  <!-- Canvas Status Telemetry Badge -->  <g id="canvas-hud">    <rect x="20" y="20" width="320" height="36" rx="4" fill="#0c0c12" fill-opacity="0.9" stroke="#22222c" stroke-width="1" />    <circle cx="36" cy="38" r="4" fill="#DE2626" />    <text x="52" y="42" fill="#FFFFFF" font-size="11" font-family="monospace" font-weight="bold" letter-spacing="1">ERA 104 // FOUNDATIONAL TABULAR & M</text>  </g>
+</svg>

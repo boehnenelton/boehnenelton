@@ -1,0 +1,200 @@
+{
+  "diagramId": "bejson_104_105_libraries_arch",
+  "name": "BEJSON 104 & 105 Library Ecosystem",
+  "description": "Architectural map of Foundational Era (104/104a/104db) and Integrity Era (105/105a/105db) Python and JavaScript libraries.",
+  "territories": [
+    {
+      "id": "zone_lib104",
+      "kind": "rect",
+      "cx": 260,
+      "cy": 360,
+      "size": 440,
+      "label": "Foundational Era (libraries_104)",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "zone_lib105",
+      "kind": "rect",
+      "cx": 780,
+      "cy": 360,
+      "size": 440,
+      "label": "Integrity Era (libraries_105)",
+      "color": "#DE2626"
+    },
+    {
+      "id": "zone_apps",
+      "kind": "rect",
+      "cx": 1300,
+      "cy": 360,
+      "size": 440,
+      "label": "Flagship Runtime Platforms",
+      "color": "#FFFFFF"
+    }
+  ],
+  "shapes": [
+    {
+      "id": "lib104_core",
+      "label": "104 Core & MFDB v1.31",
+      "text": "O(1) Field Map Cache, 104/104a/104db CRUD",
+      "kind": "rect",
+      "sizeClass": "medium",
+      "color": "#181820",
+      "fontColor": "#ffffff",
+      "cx": 260,
+      "cy": 200,
+      "parentId": null
+    },
+    {
+      "id": "lib104_ai_cms",
+      "label": "104 AI, CMS & Writing",
+      "text": "Interactions API, BKS-1, Chunker & Projects",
+      "kind": "rect",
+      "sizeClass": "medium",
+      "color": "#181820",
+      "fontColor": "#ffffff",
+      "cx": 260,
+      "cy": 360,
+      "parentId": "lib104_core"
+    },
+    {
+      "id": "lib104_html_diag",
+      "label": "104 BEHTML, HTML & Diagrams",
+      "text": "8-lane Ry=32px UI grids & Diagrammer core",
+      "kind": "rect",
+      "sizeClass": "medium",
+      "color": "#181820",
+      "fontColor": "#ffffff",
+      "cx": 260,
+      "cy": 520,
+      "parentId": "lib104_core"
+    },
+    {
+      "id": "lib105_core",
+      "label": "105 Core & MFDB v1.40",
+      "text": "UUIDv4 record keys, SHA-256 & FK cascades",
+      "kind": "rect",
+      "sizeClass": "medium",
+      "color": "#181820",
+      "fontColor": "#ffffff",
+      "cx": 780,
+      "cy": 200,
+      "parentId": null
+    },
+    {
+      "id": "lib105_graphics",
+      "label": "105 Graphics & Canvas",
+      "text": "Row-per-frame 105a timelines, SVG/GIF/MP4",
+      "kind": "rect",
+      "sizeClass": "medium",
+      "color": "#181820",
+      "fontColor": "#ffffff",
+      "cx": 780,
+      "cy": 360,
+      "parentId": "lib105_core"
+    },
+    {
+      "id": "lib105_tax_std",
+      "label": "105 Standards & Taxonomies",
+      "text": "MTV CMS scaffolds & schema registries",
+      "kind": "rect",
+      "sizeClass": "medium",
+      "color": "#181820",
+      "fontColor": "#ffffff",
+      "cx": 780,
+      "cy": 520,
+      "parentId": "lib105_core"
+    },
+    {
+      "id": "app_bejson_cms",
+      "label": "BEJSON_CMS (Flagship)",
+      "text": "4-service publishing suite & static compiler",
+      "kind": "rect",
+      "sizeClass": "medium",
+      "color": "#181820",
+      "fontColor": "#ffffff",
+      "cx": 1300,
+      "cy": 200,
+      "parentId": null
+    },
+    {
+      "id": "app_cli_ai",
+      "label": "CLI_AI & Profile_Chat",
+      "text": "Stateful Interactions API & persistent logs",
+      "kind": "rect",
+      "sizeClass": "medium",
+      "color": "#181820",
+      "fontColor": "#ffffff",
+      "cx": 1300,
+      "cy": 360,
+      "parentId": null
+    },
+    {
+      "id": "app_newagent",
+      "label": "NewAgent & Management_Tool",
+      "text": "JobMaker state machine & 57-col CLI tools",
+      "kind": "rect",
+      "sizeClass": "medium",
+      "color": "#181820",
+      "fontColor": "#ffffff",
+      "cx": 1300,
+      "cy": 520,
+      "parentId": null
+    }
+  ],
+  "connectors": [
+    {
+      "id": "l1",
+      "from": "lib104_core",
+      "to": "lib104_ai_cms",
+      "flow": "forward"
+    },
+    {
+      "id": "l2",
+      "from": "lib104_core",
+      "to": "lib104_html_diag",
+      "flow": "forward"
+    },
+    {
+      "id": "l3",
+      "from": "lib104_core",
+      "to": "lib105_core",
+      "flow": "forward"
+    },
+    {
+      "id": "l4",
+      "from": "lib105_core",
+      "to": "lib105_graphics",
+      "flow": "forward"
+    },
+    {
+      "id": "l5",
+      "from": "lib105_core",
+      "to": "lib105_tax_std",
+      "flow": "forward"
+    },
+    {
+      "id": "l6",
+      "from": "lib104_ai_cms",
+      "to": "app_bejson_cms",
+      "flow": "forward"
+    },
+    {
+      "id": "l7",
+      "from": "lib105_graphics",
+      "to": "app_bejson_cms",
+      "flow": "forward"
+    },
+    {
+      "id": "l8",
+      "from": "lib104_ai_cms",
+      "to": "app_cli_ai",
+      "flow": "forward"
+    },
+    {
+      "id": "l9",
+      "from": "lib105_tax_std",
+      "to": "app_newagent",
+      "flow": "forward"
+    }
+  ]
+}

@@ -21,6 +21,7 @@
   - [1. The Tabular Schema Specification](#1-the-tabular-schema-specification)
   - [2. O(1) Field Map Cache Resolution](#2-o1-field-map-cache-resolution)
   - [3. Deterministic Vector Compilation Pipeline](#3-deterministic-vector-compilation-pipeline)
+- [System Architecture & Data Flow Pipeline](#system-architecture--data-flow-pipeline)
 - [Core Architectural Pillars](#core-architectural-pillars)
   - [BEJSON 104a & 105 Format Matrix](#bejson-104a--105-format-matrix)
   - [Multi-File Database (MFDB)](#multi-file-database-mfdb)
@@ -147,6 +148,21 @@ def compile_bejson_to_svg(bejson_doc: dict, time_sec: float = 0.0) -> str:
 
     return f'<svg width="1280" height="640">{"".join(rendered_elements)}</svg>'
 ```
+
+---
+
+## System Architecture & Data Flow Pipeline
+
+<div align="center">
+  <img src="assets/bejson_ecosystem_pipeline.gif" alt="BEJSON Autonomous Ecosystem Pipeline Architecture" width="100%" />
+</div>
+
+The BEJSON autonomous architecture coordinates workloads across four deterministic execution stages:
+
+1. **01 · Schemas (BEJSON 104a / 105)**: Immutable contract ledgers defining field types, positional coordinates, UUIDv4 fingerprints, and cryptographic SHA-256 validation digests.
+2. **02 · Resolution (O(1) Field Map)**: High-speed zero-allocation compilation that caches string column addresses to integer array indices on initial load, enabling microsecond memory slice reads.
+3. **03 · Persistence (MFDB Multi-File)**: Decentralized relational database federation linking multiple flat-file tables through atomic rename locks without an external database server daemon.
+4. **04 · Subsystems (Autonomous CLI)**: Clean dispatch layer routing workloads into specialized operational platforms (`Management_Tool`, `Management_CMS`, `NewAgent`, and `Reminder_Tool`) enforcing strict 57-column portrait mobile discipline.
 
 ---
 
