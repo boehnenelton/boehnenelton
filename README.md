@@ -72,17 +72,25 @@
 
 ## Overview & Quick Start Setup
 
-This repository serves as the central architectural hub, visual asset compiler, and profile portal for **Elton Boehnen** (`boehnenelton`). It showcases the data formats (**`BEJSON`** and **`MFDB`**), canonical standard libraries (**`libraries_104`** and **`libraries_105`**), and production software platforms—led by the flagship **[`BEJSON_CMS`](https://github.com/boehnenelton/BEJSON_CMS)** alongside **[`NewAgent`](https://github.com/boehnenelton/NewAgent)**, **`Project_Chunker`**, and **[`CLI_AI`](https://github.com/boehnenelton/CLI_AI)**—engineered across the Boehnen software ecosystem.
+This repository serves as the central architectural hub, visual asset compiler, and profile portal for **Elton Boehnen** (`boehnenelton`). It showcases the data formats (**`BEJSON`** and **`MFDB`**), canonical standard libraries (**`libraries_104`** and **`libraries_105`**), and production software platforms—led by the flagship **[`BEJSON_CMS`](https://github.com/boehnenelton/BEJSON_CMS)** alongside **[`NewAgent`](https://github.com/boehnenelton/NewAgent)**, **`Project_Chunker`**, **`Reminder_Tool`**, and **[`CLI_AI`](https://github.com/boehnenelton/CLI_AI)**—engineered across the Boehnen software ecosystem.
+
+<div align="center">
+  <img src="assets/slides/slide_01_data_revolution.png" alt="Slide 01 — Inside the BEJSON & MFDB Ecosystem" width="100%" />
+</div>
 
 ### Central Purpose: AI-Native Relational Databasing (`BEJSON` & `MFDB`)
 
-Traditional relational database engines require background server daemons, binary wire protocols, ORM layers, and verbose SQL queries that burn valuable LLM context tokens and fail inside sandboxed mobile or edge environments. **Elton Boehnen's ecosystem is built around a singular primary mission: AI-Native Relational Databasing.**
+Traditional relational database engines require background server daemons, binary wire protocols, ORM layers, and verbose SQL queries that burn valuable AI model context tokens and fail inside sandboxed mobile or edge environments. **Elton Boehnen's ecosystem is built around a singular primary mission: AI-Native Relational Databasing.**
 
 By declaring schema fields (`Fields`) once at the top of a document and packing records into dense, positional 2D arrays (`Values`) linked across files by a central manifest (`104a.mfdb.bejson` / `105a.mfdb.bejson`), **BEJSON** (`BOEHNEN ELTON JSON`) and **MFDB** (`Multi File Database`) deliver:
 
 - **Maximum Context Window Density**: Eliminating repeated JSON key strings per record reduces token footprint by **55%–70%**, allowing autonomous AI agents to ingest entire relational tables directly into context.
 - **Zero-Daemon Portability**: Databases live directly on the filesystem as human-readable, Git-diffable files protected by two-tier re-entrant locks (`RLock` + `.lock`) and atomic sibling-tempfile renames (`os.fsync` + `os.replace`)—running identically on Linux workstations and Android Termux ARM64 devices.
 - **Cryptographic & Relational Determinism**: Format `105` mints immutable column-0 **UUIDv4** record identities, enforces per-record **SHA-256** verification digests, and executes cross-file foreign-key cascades (`ON DELETE CASCADE`, `RESTRICT`, `SET NULL`) without a background database server.
+
+<div align="center">
+  <img src="assets/slides/slide_02_architectural_scam.png" alt="Slide 02 — Deterministic Reduction vs Legacy Bloat" width="100%" />
+</div>
 
 ### Prerequisites & Environment Setup
 
@@ -117,7 +125,14 @@ python3 dev/build_bejson_animated_showcase.py
 
 # 3. Compile the animated ecosystem pipeline diagram GIF
 python3 dev/generate_animated_diagram.py
+
+# 4. Copy the 15 architectural slides & compile the 3 contextual 3.5-second animations
+python3 dev/generate_contextual_animations.py
 ```
+
+<div align="center">
+  <img src="assets/slides/slide_03_paradigm_shift_bejson_mfdb.png" alt="Slide 03 — The Paradigm Shift: BEJSON & MFDB" width="100%" />
+</div>
 
 ---
 
@@ -151,6 +166,10 @@ The animated diagram below—packaged as a validated single-file **MFDB-132** di
 | **`BEJSON_CMS_PageEditor.py`** | `:5002` | Authoritative visual block-page and HTML/Markdown editor (`v2.3+`) with live preview, template slot binding, and atomic two-part save. | `/editor/<page_uuid>`, `/api/page/load`, `/api/page/save`, `/api/blocks/schema`, `/api/preview/render` |
 | **`BEJSON_CMS_ProfileManager.py`** | `:5003` | Author identity registry, session token rotation, role permissions, and AI authoring profile configuration. | `/profiles`, `/auth/login`, `/auth/rotate`, `/api/profile/save`, `/api/author/credits` |
 | **`cms-manage.py`** | *CLI* | Process supervisor, MFDB schema validator, atomic backup packager, credential reset tool, and headless static site compiler. | `--start-all`, `--stop-all`, `--status`, `--publish`, `--backup`, `--reset-admin`, `--validate-db` |
+
+<div align="center">
+  <img src="assets/slides/slide_09_flagship_bejson_cms.png" alt="Slide 09 — Flagship Platform: BEJSON_CMS Four-Service Topology" width="100%" />
+</div>
 
 ---
 
@@ -187,6 +206,10 @@ BEJSON_CMS/
 │   └── Writing/                          # BKS-1 4-part blog & manual pipeline modules
 └── published_site/                       # Compiled static HTML5, CSS3, assets & feed.xml
 ```
+
+<div align="center">
+  <img src="assets/slides/slide_10_two_part_page_storage.png" alt="Slide 10 — Two-Part Page Storage Architecture" width="100%" />
+</div>
 
 ---
 
@@ -279,6 +302,10 @@ The animated diagram below illustrates how **Foundational Era (`libraries_104`)*
 | **Primary Record Identity** | Application-defined primary key column (`*_id` or `*_uuid` inside `Fields`) | System-minted **UUIDv4** primary identity at implicit `row[0]` (`bejson_core_add_record_105`) |
 | **Cryptographic Verification** | Structural & primitive schema conformance (`E01`–`E89`) | Per-record **SHA-256 content digest** + strict integrity gates (`E90`–`E95`) |
 | **Migration Path** | High-speed foundational persistence for logs, configs, and snapshots | In-place atomic upgrade from `104` via `lib_bejson_Core_bejson_upgrade.py` (`upgrade_to_105`) |
+
+<div align="center">
+  <img src="assets/slides/slide_07_standard_libraries_matrix.png" alt="Slide 07 — Standard Libraries Matrix: Era Evolution (Foundational 104 vs. Integrity 105)" width="100%" />
+</div>
 
 #### The 7-Pillar Architectural Evolution (`104` → `105`)
 
@@ -437,6 +464,10 @@ A foundational achievement of `libraries_104` and `libraries_105` (**Release_Ver
 | **`Lib_JS` (JavaScript ES2022)** | Browser DOM canvases, Node.js CLI scripts, Playwright harnesses | **Native Web Crypto Integration**: Uses standard `crypto.subtle` for zero-dependency SHA-256 digests and AES-GCM chunk encryption. | `lib_bejson_Core_bejson_core.js`, `bejson_validator.js`, `mfdb_core.js`, `bejson_chunking.js`, `bejson_secure_zip.js` |
 | **`Lib_SH` (POSIX Shell / Bash)** | Termux bootstrap hooks, cron pipelines, recovery shells | **Zero-Runtime CLI Portability**: Pure Bash + `jq`/`awk` pipeline (`set -o pipefail`) enforcing identical `E01`–`E95` exit codes and Field Map lookups. | `lib_bejson_Core_bejson_core.sh`, `bejson_validator.sh`, `mfdb_core.sh`, `bejson_chunking.sh`, `bejson_errors.sh` |
 
+<div align="center">
+  <img src="assets/slides/slide_11_polyglot_natively.png" alt="Slide 11 — Polyglot Natively: Zero-Dependency Core Across Lib_PY, Lib_TS, Lib_JS & Lib_SH" width="100%" />
+</div>
+
 #### Side-by-Side Polyglot Parity Showcase (Field Map Cache & Cell Resolution)
 
 Whether a BEJSON `105a` file is opened by a Python Flask service, a TypeScript edge worker, or a Bash maintenance hook, the column offset math (`row[0]` = `record_uuid`, `Fields[i]` = `row[i + 1]`) and validation rules are identical:
@@ -500,6 +531,10 @@ The ecosystem coordinates workloads across four deterministic execution stages:
 3. **03 · Persistence (`MFDB Multi-File`)**: Relational database federation linking multiple flat-file tables through atomic rename locks without an external database daemon.
 4. **04 · Subsystems (`Execution Platforms`)**: Clean dispatch layer routing workloads into **`BEJSON_CMS`**, **`CLI_AI`**, **`NewAgent`**, **`Management_Tool`**, and **`Reminder_Tool`**.
 
+<div align="center">
+  <img src="assets/slides/slide_04_four_stage_execution_pipeline.png" alt="Slide 04 — The 4-Stage Execution Pipeline" width="100%" />
+</div>
+
 ---
 
 ## BEJSON Schema-Driven Graphics Engine
@@ -560,6 +595,10 @@ col_width  = field_map["stroke_width"]
 col_anim   = field_map["animation_mode"]
 ```
 
+<div align="center">
+  <img src="assets/slides/slide_05_anatomy_bejson_schema.png" alt="Slide 05 — Anatomy of BEJSON Schema Architecture & Field Map Cache" width="100%" />
+</div>
+
 ### 3. Deterministic Vector Compilation Pipeline
 
 The renderer iterates rows via the Field Map Cache, computes harmonic vertical offsets for `harmonic_float` primitives, and emits standalone SVG markup:
@@ -609,7 +648,7 @@ def compile_bejson_to_svg(bejson_doc: dict, time_sec: float = 0.0) -> str:
 
 ### 1. Diagram Schema Architecture (`104a.mfdb.bejson` & `MFDB-132` Specification)
 
-A BEJSON architecture diagram is modeled as an MFDB relational database comprising three core entity tables (`Board`, `Connector`, `Territory`) coordinated by a master manifest ([`lib_bejson_Diagrams_diagrams_core.py`](/storage/emulated/0/Admin/Libraries/libraries_104/Lib_PY/Diagrams/lib_bejson_Diagrams_diagrams_core.py)):
+A BEJSON architecture diagram is modeled as an MFDB relational database comprising three core entity tables (`Board`, `Connector`, `Territory`) coordinated by a master manifest (`libraries_104/Lib_PY/Diagrams/lib_bejson_Diagrams_diagrams_core.py`):
 
 #### Master Manifest (`104a.mfdb.bejson`)
 ```json
@@ -640,6 +679,10 @@ A BEJSON architecture diagram is modeled as an MFDB relational database comprisi
   ]
 }
 ```
+
+<div align="center">
+  <img src="assets/slides/slide_06_mfdb_federation.png" alt="Slide 06 — The MFDB Federation: Manifest-Driven Governance & Atomic Operations" width="100%" />
+</div>
 
 #### Board Entity Schema (`BOARD_BASE_FIELDS` in `data/board.bejson`)
 ```json
@@ -780,6 +823,10 @@ In `lib_bejson_Graphics_graphics_schemas.py`, a multi-frame animation sequence i
   ]
 }
 ```
+
+<div align="center">
+  <img src="assets/slides/slide_08_graphics_105_visual_engine.png" alt="Slide 08 — Graphics 105: Schema-Driven Visual Engine" width="100%" />
+</div>
 
 ### 3. Canvas Config Schema Specification
 
@@ -1029,6 +1076,10 @@ All web interfaces, static publications, SVG diagrams, and terminal outputs enfo
 - **Signature Vivid Red (`#DE2626`)**: Directional dividers, active highlights, data-flow pulses, and cubic accents.
 - **Header Design Law**: Web headers contain at most `[Hamburger Drawer Button] [App Title (<= 3 Words)] [Settings Overlay Cog]`, with secondary utilities placed on a horizontal overflow dock strip immediately below the header.
 
+<div align="center">
+  <img src="assets/slides/slide_14_design_law_cubic_anchors.png" alt="Slide 14 — The Design Law: Tri-Color Palette, Header Design Law & 57-Column CLI Restraint" width="100%" />
+</div>
+
 ---
 
 ## Ecosystem Platforms & Developer Suites
@@ -1049,9 +1100,13 @@ All web interfaces, static publications, SVG diagrams, and terminal outputs enfo
         |                  |                         |                  |
 +-------v------+   +-------v------+          +-------v------+   +-------v------+
 | BKS-1 Blog & |   | 12-Key Pool  |          |   Project    |   |   Reminder   |
-| PageEditor   |   | & Web Canvas |          | Manager V180 |   |     Tool     |
+| PageEditor   |   | & Web Canvas |          | Chunker V180 |   |     Tool     |
 +--------------+   +--------------+          +--------------+   +--------------+
 ```
+
+<div align="center">
+  <img src="assets/slides/slide_12_autonomous_subsystems.png" alt="Slide 12 — Ecosystem Expansion: Autonomous Subsystems" width="100%" />
+</div>
 
 ### 1. `CLI_AI` & `Profile_Chat` — Stateful Gemini Interactions & Multi-Provider Suite
 - **Repository**: [`CLI_AI`](https://github.com/boehnenelton/CLI_AI)
@@ -1074,6 +1129,13 @@ All web interfaces, static publications, SVG diagrams, and terminal outputs enfo
 - **Repository**: [`NewAgent`](https://github.com/boehnenelton/NewAgent)
 - **Role**: Ground-up, asynchronous AI coding assistant, autonomous task execution engine, and multi-interface orchestration platform engineered for Linux and Android Termux ARM64 environments.
 - **Core Stack**: Python 3.10+, Dual AI Engine (REST + Google Interactions API), BEJSON 104a / MFDB v1.40 Persistence, 57-Column Positional Telemetry TUI, Flask Web Portal.
+
+<div align="center">
+  <img src="assets/newagent_context_bubble_anim.gif" alt="NewAgent & JobMaker (v1.2.15 · PKG 135) — Animated 5-Surface & 6-Partition Context Bubble Topology (3.5s)" width="100%" />
+</div>
+
+*Animation Source: [`assets/newagent_context_bubble_anim.svg`](assets/newagent_context_bubble_anim.svg) · [`dev/generate_contextual_animations.py`](dev/generate_contextual_animations.py)*
+
 - **Five Coordinated Operational Surfaces**:
   1. **`agent.py` (Interactive Terminal Agent)**: Multi-turn conversant featuring live context bubble assembly, action tag execution (`<exec>`, `<edit_file>`, `<create_file>`), autonomous auto-continue loops, and data-driven slash commands.
   2. **`cliagent.py` (Headless Scriptable Daemon)**: Zero-overhead CLI designed for pipelines, shell pipes, and background cron scripts with structured JSON output, exit code guarantees, and timeout enforcement.
@@ -1120,11 +1182,18 @@ python3 JobMaker.py --port 5002
 ---
 
 ### 4. `Project_Chunker` (`v1.8.0 / PKG 114`) — Dual-MFDB Project Archiving, Snapshot Database & Atomic Scoop Engine
-- **System Location**: `/storage/emulated/0/Admin/System/Project_Chunker`
-- **Role**: Enterprise-grade, local-first, zero-SQL project management, filesystem snapshot archiving, and database engine engineered for Linux workstations and Android Termux ARM64 environments.
+- **Canonical Environment Pointer**: `$PROJECT_CHUNKER_ROOT` (`Admin/System/Project_Chunker`)
+- **Role**: Enterprise-grade, local-first, file-backed project management, filesystem snapshot archiving, and database engine engineered for Linux workstations and Android Termux ARM64 environments.
 - **Core Stack**: Python 3.10+, BEJSON 104a, Dual-MFDB Architecture, Streaming 64 KB SHA-256 Hashing, 57-Column TUI Menu, Multi-Service Flask Portal.
+
+<div align="center">
+  <img src="assets/project_chunker_scoop_anim.gif" alt="Project_Chunker (v1.8.0 · PKG 114) — Animated Dual-MFDB & 4-Stage Zero-Data-Loss Atomic Scoop Pipeline (3.5s)" width="100%" />
+</div>
+
+*Animation Source: [`assets/project_chunker_scoop_anim.svg`](assets/project_chunker_scoop_anim.svg) · [`dev/generate_contextual_animations.py`](dev/generate_contextual_animations.py)*
+
 - **Architectural Philosophy & Design Principles**:
-  - **Local-First Zero-SQL**: Eliminates heavy database server daemons, configuration drift, and network dependencies by storing complete filesystem snapshots in deterministic BEJSON 104a files.
+  - **Local-First File-Backed Persistence**: Eliminates heavy database server daemons, configuration drift, and network dependencies by storing complete filesystem snapshots in deterministic BEJSON 104a files.
   - **Deterministic Immutability & Streaming Bit-for-Bit Verifiability**: Once written, snapshot chunk files are immutable; every captured file carries an independent streaming 64 KB SHA-256 cryptographic hash.
   - **Zero Path Assumptions**: Self-locates execution root via `Path(__file__).resolve().parent.parent` without hardcoded path dependencies.
 - **3-Tier Relational Identity Governance Matrix**:
@@ -1132,7 +1201,7 @@ python3 JobMaker.py --port 5002
   - **`Session_Id`**: Standard UUIDv4 isolating individual CLI, menu, or web transactions.
   - **`Versioned_UUID`**: Cryptographic UUIDv4 primary key bound to `Project_Version` + `Package_Version`, linking the Master Registry, Tracker DB, and Snapshot Chunks.
 - **Dual-MFDB Architecture & 3-Pillar Data Model**:
-  1. **Master Registry (`storage/master/data/registry.bejson`)**: Fast O(1) index mapping `Versioned_UUID` to relative tracker paths, project status (`active`, `archived`, `superseded`), and registration timestamps.
+  1. **Master Registry (`storage/master/data/registry.bejson`)**: Fast dictionary-cached index mapping `Versioned_UUID` to relative tracker paths, project status (`active`, `archived`, `superseded`), and registration timestamps.
   2. **Historical Tracker Plane (`storage/trackers/data/<project>.bejson`)**: Preserves the complete historical lineage of all `bejson_project.json` manifests for each project across all versions.
   3. **Snapshot Chunks (`storage/project_snapshots/<project>/data/<project>-V<ver>-PKG<pkg>.bejson`)**: Packages complete physical filesystem payloads into a single table with 10 canonical fields:
      - `File_Name` (`string`): Basename of the file.
@@ -1183,9 +1252,83 @@ python3 CLI/project_chunker.py --restore <VERSIONED_UUID> --dest /path/to/target
 python3 Menu/project_chunker_menu.py
 ```
 
-### 5. `Reminder_Tool` — Priority Terminal Launch Reminders
+---
+
+### 5. `Reminder_Tool` (`v1.0.0`) — Authoritative BEJSON 104a Reminder Management Engine & Termux `~/.bashrc` Launch Hook
 - **Repository**: [`Reminder_Tool`](https://github.com/boehnenelton/Reminder_Tool)
-- **Role**: Fast terminal priority queue (`urgent`, `high`, `normal`) backed by BEJSON `104a` with instant 57-column ANSI summary views and completion archival.
+- **Canonical Environment Pointers**: `$REMINDER_TOOL_ROOT` (`tools/reminder_tool/reminder_tool.py`) · `$REMINDERS_REGISTRY` (`data/reminders.104a.bejson`)
+- **Role**: Authoritative BEJSON `104a` reminder management engine, conversational AI task queue, and interactive Termux startup banner engineered with strict 57-column portrait discipline and zero-noise empty state governance.
+
+<div align="center">
+  <img src="assets/reminder_tool_termux_anim.gif" alt="Reminder_Tool (v1.0.0) — Animated BEJSON 104a Active/Completed Lifecycle & Termux .bashrc Launch Hook (3.5s)" width="100%" />
+</div>
+
+*Animation Source: [`assets/reminder_tool_termux_anim.svg`](assets/reminder_tool_termux_anim.svg) · [`dev/generate_contextual_animations.py`](dev/generate_contextual_animations.py)*
+
+- **Dual BEJSON `104a` Registry Architecture**:
+  1. **Active Reminders Queue (`data/reminders.104a.bejson`)**:
+     - Stores only currently pending tasks across **7 canonical columns** resolved via `compile_bejson_field_map()`:
+       - `reminder_id` (`string` — UTC timestamp slug `rem_YYYYMMDD_HHMMSS`)
+       - `reminder_text` (`string` — task message content)
+       - `priority` (`string` — `urgent`, `high`, `normal`, `low`)
+       - `status` (`string` — `active`)
+       - `creation_date` (`string` — ISO-8601 UTC creation timestamp)
+       - `due_date` (`string` — optional deadline or target date)
+       - `tags` (`string` — comma-separated classification tags)
+  2. **Completed Reminders Archive (`data/completed_reminders.104a.bejson`)**:
+     - Preserves historical completed tasks across **6 canonical columns** (`reminder_id`, `reminder_text`, `priority`, `creation_date`, `completion_date`, `tags`).
+- **Pop-on-Complete Removal & Archival Lifecycle (`complete_reminder`)**:
+  - When a reminder is marked complete (`remind done <index|id|substring>`), `ReminderEngine.complete_reminder()` resolves the target row by 1-based numeric index (`1`), `reminder_id` (`rem_20261109...`), or case-insensitive text substring.
+  - It **immediately removes (`rows.pop()`) the reminder from the active `reminders.104a.bejson` queue** via an atomic `.tmp` swap (`save_bejson_atomic`) and appends the record with a UTC `completion_date` into `completed_reminders.104a.bejson`—ensuring completed tasks never clutter future terminal launches.
+- **Direct Conversational AI & CLI Dispatch**:
+  - Whenever an autonomous coding session or user prompt instructs *"add reminder `<text>`"* or *"remind me to `<task>`"*, the agent immediately executes `reminder_tool.py add "<text>" [-p urgent|high|normal]`.
+  - When instructed that a reminder is complete, the agent executes `remind done <id|index>` to remove it from the active queue and archive it.
+  - Unrecognized bare arguments (`remind "Update MFDB schema docs"`) automatically fall back to adding a `normal` priority reminder for zero-friction capture.
+- **Interactive Termux `~/.bashrc` Launch Integration (`--print-termux`)**:
+  - Hooked directly into `~/.bashrc` alongside the `alias remind='python3 .../reminder_tool.py'` shortcut:
+    ```bash
+    # ~/.bashrc — Interactive Termux Startup Reminder Banner Hook
+    alias remind='python3 "$REMINDER_TOOL_ROOT/reminder_tool.py"'
+
+    if [[ $- == *i* ]]; then
+        if command -v python3 >/dev/null 2>&1 && [ -f "$REMINDER_TOOL_ROOT/reminder_tool.py" ]; then
+            python3 "$REMINDER_TOOL_ROOT/reminder_tool.py" --print-termux 2>/dev/null
+        fi
+    fi
+    ```
+  - On every new Termux session launch, `--print-termux` inspects `reminders.104a.bejson`. If active reminders exist, it renders a high-contrast 57-column Tri-Color banner highlighting `[URGENT]` and `[HIGH]` tasks in `#DE2626` Truecolor red; if the active queue is empty (`Values: []`), it outputs **nothing** (zero terminal noise).
+
+#### Operational CLI Workflows & 57-Column Termux Output
+
+```bash
+# 1. Add an urgent or high-priority reminder from CLI or conversational AI dispatch
+remind add "Audit MFDB v1.40 cascade locks" -p urgent -t "mfdb,audit"
+remind add "Publish BEJSON_CMS static bundle" -p high
+
+# 2. Render the Termux ~/.bashrc startup banner (auto-executed on terminal launch)
+remind --print-termux
+
+# 3. Complete a reminder by 1-based index, ID, or text substring (removes from active & archives)
+remind done 1
+
+# 4. View active queue, completed history archive, or structured JSON agent context
+remind list
+remind completed
+remind --json
+```
+
+```text
+=========================================================
+ [REMINDERS] ACTIVE PENDING TASKS (2)
+---------------------------------------------------------
+  [1] [URGENT] Audit MFDB v1.40 cascade locks
+      Added: 2026-11-09 | ID: rem_20261109_112004
+  [2] [HIGH]   Publish BEJSON_CMS static bundle
+      Added: 2026-11-09 | ID: rem_20261109_112519
+---------------------------------------------------------
+  Complete task via: remind done <#>
+=========================================================
+```
 
 ---
 
@@ -1225,6 +1368,10 @@ The `lib_bejson_Core_bejson_validator.py` and `lib_bejson_Diagrams_diagrams_vali
 | `E90` – `E95` | Format 105 Integrity | Valid UUIDv4 at column 0, matching SHA-256 hash | Re-mint UUID or flag ledger tampering |
 | `E_DIAG_01` – `10`| Diagram Surface Geometry | 50px grid snap, 40px bounding clearance, valid flow | Auto-quantize coordinates, purge dead links |
 
+<div align="center">
+  <img src="assets/slides/slide_13_system_error_registry.png" alt="Slide 13 — System Error Registry & Quality Gates (E01-E95)" width="100%" />
+</div>
+
 ---
 
 ## Technical Specifications & Storage Standards
@@ -1241,6 +1388,10 @@ Terminal Geometry          57-Column Mobile Portrait Ceiling
 Web User Interface         Tri-Color Palette (#0A0A0C, #FFFFFF, #DE2626), Sharp Borders
 Build Pipelines            Headless Chromium Automation, Pillow/FFmpeg WebP & GIF Encode
 ```
+
+<div align="center">
+  <img src="assets/slides/slide_15_synthesis_zero_bloat.png" alt="Slide 15 — Synthesis: The Unifying Theory & Sovereign Control" width="100%" />
+</div>
 
 ---
 

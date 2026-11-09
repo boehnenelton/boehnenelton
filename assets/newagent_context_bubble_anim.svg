@@ -1,0 +1,66 @@
+<svg width="960" height="540" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#0A0A0C" />
+  <rect x="24" y="24" width="912" height="492" fill="none" stroke="#1E1E2A" stroke-width="1.5" />
+  <rect x="24" y="24" width="912" height="62" fill="#0E0E14" stroke="#1E1E2A" stroke-width="1" />
+  <rect x="24" y="24" width="6" height="62" fill="#DE2626" />
+  <text x="46" y="52" fill="#FFFFFF" font-size="17" font-family="system-ui, sans-serif" font-weight="800" letter-spacing="0.8">NEWAGENT &amp; JOBMAKER (v1.2.15 · PKG 135) // CONTEXT BUBBLE &amp; EXECUTION TOPOLOGY</text>
+  <text x="46" y="72" fill="#888896" font-size="10.5" font-family="monospace" letter-spacing="1.5">5 SURFACES · 6-PARTITION DYNAMIC CONTEXT BUBBLE · DUAL AI ENGINE · NATIVE AGY SKILLS</text>
+
+  <g transform="translate(894, 55.00)">
+    <polygon points="0,-16 18,-6 0,4 -18,-6" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1"/>
+    <polygon points="-18,-6 0,4 0,24 -18,14" fill="#181820" stroke="#FFFFFF" stroke-width="1"/>
+    <polygon points="0,4 18,-6 18,14 0,24" fill="#DE2626" stroke="#FFFFFF" stroke-width="1"/>
+  </g>
+
+  <!-- Column 1: 5 Operational Surfaces -->
+  <rect x="40" y="106" width="272" height="336" fill="#0C0C12" stroke="#222230" stroke-width="1" />
+  <rect x="40" y="106" width="272" height="38" fill="#14141E" stroke="#222230" stroke-width="1" />
+  <text x="54" y="130" fill="#FFFFFF" font-size="12" font-family="monospace" font-weight="700">01 · 5 OPERATIONAL SURFACES</text>
+  <g transform="translate(52, 162)"><rect x="0" y="0" width="248" height="44" fill="#181016" stroke="#DE2626" stroke-width="1.5"/><rect x="0" y="0" width="5" height="44" fill="#DE2626"/><text x="14" y="18" fill="#FFFFFF" font-size="11" font-family="monospace" font-weight="700">01 · agent.py</text><text x="14" y="34" fill="#888896" font-size="9.5" font-family="monospace">Interactive Terminal Conversant</text></g><g transform="translate(52, 215)"><rect x="0" y="0" width="248" height="44" fill="#0E0E14" stroke="#262634" stroke-width="1.5"/><rect x="0" y="0" width="5" height="44" fill="#262634"/><text x="14" y="18" fill="#FFFFFF" font-size="11" font-family="monospace" font-weight="700">02 · cliagent.py</text><text x="14" y="34" fill="#888896" font-size="9.5" font-family="monospace">Headless JSON Pipe Daemon</text></g><g transform="translate(52, 268)"><rect x="0" y="0" width="248" height="44" fill="#0E0E14" stroke="#262634" stroke-width="1.5"/><rect x="0" y="0" width="5" height="44" fill="#262634"/><text x="14" y="18" fill="#FFFFFF" font-size="11" font-family="monospace" font-weight="700">03 · config_manager.py</text><text x="14" y="34" fill="#888896" font-size="9.5" font-family="monospace">57-Col 67-Option TUI Matrix</text></g><g transform="translate(52, 321)"><rect x="0" y="0" width="248" height="44" fill="#0E0E14" stroke="#262634" stroke-width="1.5"/><rect x="0" y="0" width="5" height="44" fill="#262634"/><text x="14" y="18" fill="#FFFFFF" font-size="11" font-family="monospace" font-weight="700">04 · webagent.py</text><text x="14" y="34" fill="#888896" font-size="9.5" font-family="monospace">Loopback Web Shell (:5001)</text></g><g transform="translate(52, 374)"><rect x="0" y="0" width="248" height="44" fill="#0E0E14" stroke="#262634" stroke-width="1.5"/><rect x="0" y="0" width="5" height="44" fill="#262634"/><text x="14" y="18" fill="#FFFFFF" font-size="11" font-family="monospace" font-weight="700">05 · JobMaker.py</text><text x="14" y="34" fill="#888896" font-size="9.5" font-family="monospace">Task Blueprint Stager (:5002)</text></g>
+
+  <!-- Animated Connector 1 -> 2 -->
+  <line x1="312" y1="274" x2="352" y2="274" stroke="#DE2626" stroke-width="2.5" stroke-dasharray="8 6" stroke-dashoffset="-0" />
+  <polygon points="348,269 356,274 348,279" fill="#DE2626" />
+
+  <!-- Column 2: 6-Partition Dynamic Context Bubble -->
+  <rect x="352" y="106" width="296" height="336" fill="#0C0C12" stroke="#DE2626" stroke-width="1.5" />
+  <rect x="352" y="106" width="296" height="38" fill="#1C1014" stroke="#DE2626" stroke-width="1" />
+  <text x="366" y="130" fill="#FFFFFF" font-size="12" font-family="monospace" font-weight="700">02 · CONTEXT_BUBBLE.MD (6 SLOTS)</text>
+  <g transform="translate(364, 162)"><rect x="0" y="0" width="272" height="36" fill="#1C1014" stroke="#DE2626" stroke-width="1.5"/><rect x="0" y="0" width="48" height="36" fill="#DE2626"/><text x="24" y="23" fill="#FFFFFF" font-size="11" font-family="monospace" font-weight="700" text-anchor="middle">20%</text><text x="58" y="15" fill="#FFFFFF" font-size="10" font-family="monospace" font-weight="700">PERSISTENT POLICY</text><text x="58" y="29" fill="#9CA3AF" font-size="9" font-family="monospace">Standing directives & persona</text></g><g transform="translate(364, 206)"><rect x="0" y="0" width="272" height="36" fill="#101018" stroke="#2A2A38" stroke-width="1.5"/><rect x="0" y="0" width="48" height="36" fill="#1E1E2A"/><text x="24" y="23" fill="#FFFFFF" font-size="11" font-family="monospace" font-weight="700" text-anchor="middle">20%</text><text x="58" y="15" fill="#FFFFFF" font-size="10" font-family="monospace" font-weight="700">ACTIVE TASKS</text><text x="58" y="29" fill="#9CA3AF" font-size="9" font-family="monospace">JobMaker checklist state</text></g><g transform="translate(364, 250)"><rect x="0" y="0" width="272" height="36" fill="#101018" stroke="#2A2A38" stroke-width="1.5"/><rect x="0" y="0" width="48" height="36" fill="#1E1E2A"/><text x="24" y="23" fill="#FFFFFF" font-size="11" font-family="monospace" font-weight="700" text-anchor="middle">5%</text><text x="58" y="15" fill="#FFFFFF" font-size="10" font-family="monospace" font-weight="700">ENV DEFINITIONS</text><text x="58" y="29" fill="#9CA3AF" font-size="9" font-family="monospace">definitions.json pointers</text></g><g transform="translate(364, 294)"><rect x="0" y="0" width="272" height="36" fill="#101018" stroke="#2A2A38" stroke-width="1.5"/><rect x="0" y="0" width="48" height="36" fill="#1E1E2A"/><text x="24" y="23" fill="#FFFFFF" font-size="11" font-family="monospace" font-weight="700" text-anchor="middle">30%</text><text x="58" y="15" fill="#FFFFFF" font-size="10" font-family="monospace" font-weight="700">KEYWORD TRIGGERS</text><text x="58" y="29" fill="#9CA3AF" font-size="9" font-family="monospace">Matched file & AST context</text></g><g transform="translate(364, 338)"><rect x="0" y="0" width="272" height="36" fill="#101018" stroke="#2A2A38" stroke-width="1.5"/><rect x="0" y="0" width="48" height="36" fill="#1E1E2A"/><text x="24" y="23" fill="#FFFFFF" font-size="11" font-family="monospace" font-weight="700" text-anchor="middle">15%</text><text x="58" y="15" fill="#FFFFFF" font-size="10" font-family="monospace" font-weight="700">KNOWLEDGE POOL</text><text x="58" y="29" fill="#9CA3AF" font-size="9" font-family="monospace">Periodic domain skill drips</text></g><g transform="translate(364, 382)"><rect x="0" y="0" width="272" height="36" fill="#101018" stroke="#2A2A38" stroke-width="1.5"/><rect x="0" y="0" width="48" height="36" fill="#1E1E2A"/><text x="24" y="23" fill="#FFFFFF" font-size="11" font-family="monospace" font-weight="700" text-anchor="middle">10%</text><text x="58" y="15" fill="#FFFFFF" font-size="10" font-family="monospace" font-weight="700">CWD WORKSPACE</text><text x="58" y="29" fill="#9CA3AF" font-size="9" font-family="monospace">Local context.bejson & AGENTS.md</text></g>
+
+  <!-- Animated Connector 2 -> 3 -->
+  <line x1="648" y1="274" x2="688" y2="274" stroke="#DE2626" stroke-width="2.5" stroke-dasharray="8 6" stroke-dashoffset="-0" />
+  <polygon points="684,269 692,274 684,279" fill="#DE2626" />
+
+  <!-- Column 3: Dual AI Engine & Action Execution -->
+  <rect x="688" y="106" width="232" height="336" fill="#0C0C12" stroke="#222230" stroke-width="1" />
+  <rect x="688" y="106" width="232" height="38" fill="#14141E" stroke="#222230" stroke-width="1" />
+  <text x="702" y="130" fill="#FFFFFF" font-size="12" font-family="monospace" font-weight="700">03 · DUAL AI &amp; SKILLS</text>
+
+  <g transform="translate(700, 162)">
+    <rect x="0" y="0" width="208" height="78" fill="#12121A" stroke="#DE2626" stroke-width="1.5"/>
+    <text x="12" y="22" fill="#DE2626" font-size="11" font-family="monospace" font-weight="700">ENGINE A: ASYNC REST POOL</text>
+    <text x="12" y="42" fill="#D1D5DB" font-size="9.5" font-family="monospace">• 12-Key Affinity Rotation</text>
+    <text x="12" y="58" fill="#D1D5DB" font-size="9.5" font-family="monospace">• key_state.bejson Cooldown</text>
+  </g>
+
+  <g transform="translate(700, 254)">
+    <rect x="0" y="0" width="208" height="78" fill="#12121A" stroke="#2A2A38" stroke-width="1.5"/>
+    <text x="12" y="22" fill="#FFFFFF" font-size="11" font-family="monospace" font-weight="700">ENGINE B: INTERACTIONS API</text>
+    <text x="12" y="42" fill="#D1D5DB" font-size="9.5" font-family="monospace">• previous_interaction_id</text>
+    <text x="12" y="58" fill="#D1D5DB" font-size="9.5" font-family="monospace">• Stateful Tool Scoping</text>
+  </g>
+
+  <g transform="translate(700, 346)">
+    <rect x="0" y="0" width="208" height="78" fill="#161014" stroke="#DE2626" stroke-width="1.2"/>
+    <text x="12" y="22" fill="#FFFFFF" font-size="11" font-family="monospace" font-weight="700">ACTION &amp; AGY SKILL TAGS</text>
+    <text x="12" y="42" fill="#D1D5DB" font-size="9.5" font-family="monospace">• &lt;exec&gt; / &lt;edit_file&gt;</text>
+    <text x="12" y="58" fill="#D1D5DB" font-size="9.5" font-family="monospace">• &lt;agy_skill action="run"/&gt;</text>
+  </g>
+
+  <!-- Bottom Telemetry Strip -->
+  <rect x="24" y="458" width="912" height="58" fill="#0E0E14" stroke="#1E1E2A" stroke-width="1" />
+  <circle cx="48" cy="487" r="5" fill="#DE2626" />
+  <text x="64" y="491" fill="#FFFFFF" font-size="11.5" font-family="monospace" font-weight="700">BUBBLE SYNTHESIS: ACTIVE SLOT [PERSISTENT POLICY]</text>
+  <text x="520" y="491" fill="#888896" font-size="10.5" font-family="monospace">│ TREE-WALK: / -&gt; CWD (AGENTS.md) │ SHA-256 DEDUP: VERIFIED</text>
+</svg>

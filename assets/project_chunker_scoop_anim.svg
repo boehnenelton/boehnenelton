@@ -1,0 +1,60 @@
+<svg width="960" height="540" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#0A0A0C" />
+  <rect x="24" y="24" width="912" height="492" fill="none" stroke="#1E1E2A" stroke-width="1.5" />
+  <rect x="24" y="24" width="912" height="62" fill="#0E0E14" stroke="#1E1E2A" stroke-width="1" />
+  <rect x="24" y="24" width="6" height="62" fill="#DE2626" />
+  <text x="46" y="52" fill="#FFFFFF" font-size="17" font-family="system-ui, sans-serif" font-weight="800" letter-spacing="0.8">PROJECT_CHUNKER (v1.8.0 · PKG 114) // DUAL-MFDB &amp; ATOMIC SCOOP ENGINE</text>
+  <text x="46" y="72" fill="#888896" font-size="10.5" font-family="monospace" letter-spacing="1.5">3-TIER UUID GOVERNANCE · 10-FIELD SNAPSHOT LEDGER · 4-STAGE ZERO-DATA-LOSS SCOOP</text>
+
+  <!-- Top Tier: Dual-MFDB 3-Pillar Data Model -->
+  <g transform="translate(44, 104)">
+    <rect x="0" y="0" width="272" height="136" fill="#101018" stroke="#2A2A38" stroke-width="1.5"/>
+    <rect x="0" y="0" width="5" height="136" fill="#DE2626"/>
+    <text x="16" y="26" fill="#FFFFFF" font-size="12" font-family="monospace" font-weight="800">01 · MASTER REGISTRY MFDB</text>
+    <text x="16" y="46" fill="#DE2626" font-size="10" font-family="monospace">storage/master/data/registry.bejson</text>
+    <text x="16" y="70" fill="#D1D5DB" font-size="10" font-family="monospace">• Project_GUID (Master-Assigned)</text>
+    <text x="16" y="90" fill="#D1D5DB" font-size="10" font-family="monospace">• Versioned_UUID Primary Key</text>
+    <text x="16" y="110" fill="#D1D5DB" font-size="10" font-family="monospace">• Status: active | archived</text>
+  </g>
+
+  <line x1="316" y1="172" x2="344" y2="172" stroke="#DE2626" stroke-width="2" stroke-dasharray="6 4" stroke-dashoffset="-0"/>
+
+  <g transform="translate(344, 104)">
+    <rect x="0" y="0" width="272" height="136" fill="#101018" stroke="#2A2A38" stroke-width="1.5"/>
+    <rect x="0" y="0" width="5" height="136" fill="#FFFFFF"/>
+    <text x="16" y="26" fill="#FFFFFF" font-size="12" font-family="monospace" font-weight="800">02 · HISTORICAL TRACKERS</text>
+    <text x="16" y="46" fill="#DE2626" font-size="10" font-family="monospace">storage/trackers/data/&lt;proj&gt;.bejson</text>
+    <text x="16" y="70" fill="#D1D5DB" font-size="10" font-family="monospace">• Full bejson_project.json Lineage</text>
+    <text x="16" y="90" fill="#D1D5DB" font-size="10" font-family="monospace">• Solid Integer Version History</text>
+    <text x="16" y="110" fill="#D1D5DB" font-size="10" font-family="monospace">• Superseded Conflict Routing</text>
+  </g>
+
+  <line x1="616" y1="172" x2="644" y2="172" stroke="#DE2626" stroke-width="2" stroke-dasharray="6 4" stroke-dashoffset="-0"/>
+
+  <g transform="translate(644, 104)">
+    <rect x="0" y="0" width="272" height="136" fill="#161014" stroke="#DE2626" stroke-width="1.5"/>
+    <rect x="0" y="0" width="5" height="136" fill="#DE2626"/>
+    <text x="16" y="26" fill="#FFFFFF" font-size="12" font-family="monospace" font-weight="800">03 · 10-FIELD SNAPSHOT CHUNK</text>
+    <text x="16" y="46" fill="#DE2626" font-size="10" font-family="monospace">&lt;Project&gt;-V&lt;ver&gt;-PKG&lt;pkg&gt;.bejson</text>
+    <text x="16" y="70" fill="#D1D5DB" font-size="10" font-family="monospace">• File_Content (UTF-8) / Base64</text>
+    <text x="16" y="90" fill="#D1D5DB" font-size="10" font-family="monospace">• Streaming 64KB SHA-256 Hash</text>
+    <text x="16" y="110" fill="#D1D5DB" font-size="10" font-family="monospace">• Is_Empty_Dir &amp; Modified_Time</text>
+  </g>
+
+  <!-- Section Banner: 4-Stage Atomic Scoop Gate -->
+  <rect x="44" y="252" width="872" height="26" fill="#14141E" stroke="#262636" stroke-width="1"/>
+  <text x="480" y="269" fill="#FFFFFF" font-size="11" font-family="monospace" font-weight="700" text-anchor="middle" letter-spacing="1">ZERO-DATA-LOSS ATOMIC SCOOP VERIFICATION GATE (--scoop)</text>
+
+  <g transform="translate(44, 288)"><rect x="0" y="0" width="204" height="146" fill="#1C1014" stroke="#DE2626" stroke-width="1.8"/><rect x="0" y="0" width="204" height="32" fill="#DE2626"/><text x="10" y="20" fill="#FFFFFF" font-size="10.5" font-family="monospace" font-weight="800">STAGE 1 · BUILD SNAPSHOT</text><text x="10" y="58" fill="#E5E7EB" font-size="9.5" font-family="monospace">64 KB streaming SHA-256 + Ba</text><text x="10" y="74" fill="#E5E7EB" font-size="9.5" font-family="monospace">se64 binary pack</text><line x1="10" y1="92" x2="194" y2="92" stroke="#262636" stroke-width="1"/><text x="10" y="114" fill="#DE2626" font-size="9.5" font-family="monospace" font-weight="700">10 Canonical Fields -> .bejso</text><text x="10" y="130" fill="#9CA3AF" font-size="9" font-family="monospace">n</text></g><g transform="translate(266, 288)"><rect x="0" y="0" width="204" height="146" fill="#101018" stroke="#2A2A38" stroke-width="1.8"/><rect x="0" y="0" width="204" height="32" fill="#1A1A26"/><text x="10" y="20" fill="#FFFFFF" font-size="10.5" font-family="monospace" font-weight="800">STAGE 2 · VERIFY DISK WRITE</text><text x="10" y="58" fill="#E5E7EB" font-size="9.5" font-family="monospace">os.fsync flush + re-open & r</text><text x="10" y="74" fill="#E5E7EB" font-size="9.5" font-family="monospace">e-parse from disk</text><line x1="10" y1="92" x2="194" y2="92" stroke="#262636" stroke-width="1"/><text x="10" y="114" fill="#DE2626" font-size="9.5" font-family="monospace" font-weight="700">Structural & schema gate chec</text><text x="10" y="130" fill="#9CA3AF" font-size="9" font-family="monospace">k</text></g><g transform="translate(488, 288)"><rect x="0" y="0" width="204" height="146" fill="#101018" stroke="#2A2A38" stroke-width="1.8"/><rect x="0" y="0" width="204" height="32" fill="#1A1A26"/><text x="10" y="20" fill="#FFFFFF" font-size="10.5" font-family="monospace" font-weight="800">STAGE 3 · LIVE BYTE AUDIT</text><text x="10" y="58" fill="#E5E7EB" font-size="9.5" font-family="monospace">Compare every live file byte</text><text x="10" y="74" fill="#E5E7EB" font-size="9.5" font-family="monospace"> & SHA-256 digest</text><line x1="10" y1="92" x2="194" y2="92" stroke="#262636" stroke-width="1"/><text x="10" y="114" fill="#DE2626" font-size="9.5" font-family="monospace" font-weight="700">Abort w/ ZERO deletes on mism</text><text x="10" y="130" fill="#9CA3AF" font-size="9" font-family="monospace">atch</text></g><g transform="translate(710, 288)"><rect x="0" y="0" width="204" height="146" fill="#101018" stroke="#2A2A38" stroke-width="1.8"/><rect x="0" y="0" width="204" height="32" fill="#1A1A26"/><text x="10" y="20" fill="#FFFFFF" font-size="10.5" font-family="monospace" font-weight="800">STAGE 4 · VERIFIED UNLINK</text><text x="10" y="58" fill="#E5E7EB" font-size="9.5" font-family="monospace">100% byte-verified source un</text><text x="10" y="74" fill="#E5E7EB" font-size="9.5" font-family="monospace">link & dir prune</text><line x1="10" y1="92" x2="194" y2="92" stroke="#262636" stroke-width="1"/><text x="10" y="114" fill="#DE2626" font-size="9.5" font-family="monospace" font-weight="700">Zero-Data-Loss Scoop Complete</text><text x="10" y="130" fill="#9CA3AF" font-size="9" font-family="monospace"></text></g>
+
+  <!-- Connectors between Scoop Stages -->
+  <line x1="248" y1="361" x2="266" y2="361" stroke="#DE2626" stroke-width="2.5" stroke-dasharray="6 4" stroke-dashoffset="-0"/>
+  <line x1="470" y1="361" x2="488" y2="361" stroke="#DE2626" stroke-width="2.5" stroke-dasharray="6 4" stroke-dashoffset="-0"/>
+  <line x1="692" y1="361" x2="710" y2="361" stroke="#DE2626" stroke-width="2.5" stroke-dasharray="6 4" stroke-dashoffset="-0"/>
+
+  <!-- Bottom Telemetry Strip -->
+  <rect x="24" y="458" width="912" height="58" fill="#0E0E14" stroke="#1E1E2A" stroke-width="1" />
+  <circle cx="48" cy="487" r="5" fill="#DE2626" />
+  <text x="64" y="491" fill="#FFFFFF" font-size="11.5" font-family="monospace" font-weight="700">ACTIVE GATE: STAGE 1 · BUILD SNAPSHOT</text>
+  <text x="515" y="491" fill="#888896" font-size="10.5" font-family="monospace">│ SURFACES: CLI · 57-COL TUI · FLASK WEB</text>
+</svg>
