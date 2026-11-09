@@ -22,32 +22,33 @@ ASSETS_DIR.mkdir(parents=True, exist_ok=True)
 # ---------------------------------------------------------------------------
 
 BEJSON_GRAPHIC_DATA = {
-    "Header": {
-        "Table_Name": "cubic_graphic_primitives",
-        "Format": "104a",
-        "Record_Count": 7,
-        "Author": "Elton Boehnen",
-        "Relational_ID": "a1b2c3d4-e5f6-4000-8000-000000000001",
-        "Description": "BEJSON 104a tabular vector graphic schema defining the canonical 3D isometric open branding cube and stage coordinates."
-    },
-    "Fields": [
-        "element_id",
-        "primitive_type",
-        "points_or_coords",
-        "fill_color",
-        "stroke_color",
-        "stroke_width",
-        "animation_mode",
-        "semantic_label"
+    "Format": "BEJSON",
+    "Format_Version": "104a",
+    "Format_Creator": "Elton Boehnen",
+    "Schema_Name": "cubic_graphic_primitives",
+    "Schema_Version": "1.0.0",
+    "Description": "BEJSON 104a tabular vector graphic schema defining the canonical 3D isometric open branding cube and stage coordinates.",
+    "Records_Type": [
+        "CubicGraphicPrimitive"
     ],
-    "Data": [
-        ["elem_01_substrate",   "rect",    "0,0,1280,640",                   "#0A0A0C", "none",    0.0, "static",         "Canvas Obsidian Substrate"],
-        ["elem_02_frame",       "rect",    "48,48,1184,544",                 "none",    "#1A1A22", 1.5, "static",         "Structural Inset Boundary Frame"],
-        ["elem_03_notch",       "rect",    "48,270,4,100",                   "#DE2626", "none",    0.0, "static",         "Left Boundary Accent Notch"],
-        ["elem_04_divider",     "line",    "364,256,364,404",                "none",    "#DE2626", 3.0, "pulse_alpha",    "Primary Red Focal Divider"],
-        ["elem_05_floating_cap","polygon", "0,-48,56,-18,0,12,-56,-18",      "#FFFFFF", "#FFFFFF", 1.5, "harmonic_float", "104a Hovering Diamond Cap"],
-        ["elem_06_left_facet",  "polygon", "-56,-18,0,12,0,72,-56,42",       "#181820", "#FFFFFF", 1.5, "static",         "Left Obsidian Shading Facet"],
-        ["elem_07_right_facet", "polygon", "0,12,56,-18,56,42,0,72",        "#DE2626", "#FFFFFF", 1.5, "static",         "Right Signature Red Facet"]
+    "Fields": [
+        {"name": "element_id", "type": "string"},
+        {"name": "primitive_type", "type": "string"},
+        {"name": "points_or_coords", "type": "string"},
+        {"name": "fill_color", "type": "string"},
+        {"name": "stroke_color", "type": "string"},
+        {"name": "stroke_width", "type": "number"},
+        {"name": "animation_mode", "type": "string"},
+        {"name": "semantic_label", "type": "string"}
+    ],
+    "Values": [
+        ["elem_01_substrate", "rect", "0,0,1280,640", "#0A0A0C", "none", 0.0, "static", "Canvas Obsidian Substrate"],
+        ["elem_02_frame", "rect", "48,48,1184,544", "none", "#1A1A22", 1.5, "static", "Structural Inset Boundary Frame"],
+        ["elem_03_notch", "rect", "48,270,4,100", "#DE2626", "none", 0.0, "static", "Left Boundary Accent Notch"],
+        ["elem_04_divider", "line", "364,256,364,404", "none", "#DE2626", 3.0, "pulse_alpha", "Primary Red Focal Divider"],
+        ["elem_05_floating_cap", "polygon", "0,-48,56,-18,0,12,-56,-18", "#FFFFFF", "#FFFFFF", 1.5, "harmonic_float", "104a Hovering Diamond Cap"],
+        ["elem_06_left_facet", "polygon", "-56,-18,0,12,0,72,-56,42", "#181820", "#FFFFFF", 1.5, "static", "Left Obsidian Shading Facet"],
+        ["elem_07_right_facet", "polygon", "0,12,56,-18,56,42,0,72", "#DE2626", "#FFFFFF", 1.5, "static", "Right Signature Red Facet"]
     ]
 }
 

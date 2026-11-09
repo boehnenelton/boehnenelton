@@ -1,75 +1,157 @@
-<svg id="diagram-stage" viewBox="0 0 1280 640" width="1280" height="640" xmlns="http://www.w3.org/2000/svg" style="background:#000000;width:100%;height:100%;display:block;">
-  <defs>
-    <!-- Arrow Markers -->
-    <marker id="arrow-forward" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#FFFFFF" />
-    </marker>
-    <marker id="arrow-active" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 1 L 9 5 L 0 9 z" fill="#DE2626" />
-    </marker>
-    <!-- Glow Filter for Active Nodes -->
-    <filter id="node-red-glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="blur" />
-      <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
-    </filter>
-    <pattern id="diag-grid" width="50" height="50" patternUnits="userSpaceOnUse">
-      <circle cx="25" cy="25" r="1" fill="#181822" />
-    </pattern>
-  </defs>
-  <!-- Background Canvas Grid -->
-  <rect width="1280" height="640" fill="url(#diag-grid)" />
-  <!-- Main Viewport Transform Group -->
-  <g id="viewport-group" transform="translate(65.92, 55.04) scale(0.736)">
-    <rect x="40.0" y="140.0" width="440.0" height="440.0" rx="16" fill="#DE2626" fill-opacity="0.04" stroke="#DE2626" stroke-opacity="0.25" stroke-width="1.5" stroke-dasharray="6,4" />
-    <text x="260.0" y="160.0" fill="#DE2626" fill-opacity="0.8" font-size="12" font-family="monospace" letter-spacing="1.5" text-anchor="middle" font-weight="bold">1. WEB SERVICES & CLI TIER</text>
-    <rect x="560.0" y="140.0" width="440.0" height="440.0" rx="16" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1.5" stroke-dasharray="6,4" />
-    <text x="780.0" y="160.0" fill="#FFFFFF" fill-opacity="0.8" font-size="12" font-family="monospace" letter-spacing="1.5" text-anchor="middle" font-weight="bold">2. MFDB STORAGE & STATIC BUILD</text>
-    <rect x="1080.0" y="140.0" width="440.0" height="440.0" rx="16" fill="#DE2626" fill-opacity="0.04" stroke="#DE2626" stroke-opacity="0.25" stroke-width="1.5" stroke-dasharray="6,4" />
-    <text x="1300.0" y="160.0" fill="#DE2626" fill-opacity="0.8" font-size="12" font-family="monospace" letter-spacing="1.5" text-anchor="middle" font-weight="bold">3. BKS-1 AI & GRAPHICS 105</text>
-    <!-- Connector cms_cli->cms_admin -->    <line x1="260.0" y1="200.0" x2="260.0" y2="360.0" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.4" marker-end="url(#arrow-forward)" />
-    <!-- Connector cms_admin->cms_editor -->    <line x1="260.0" y1="360.0" x2="260.0" y2="520.0" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.4" marker-start="url(#arrow-forward)" marker-end="url(#arrow-forward)" />
-    <!-- Connector cms_cli->mfdb_master -->    <line x1="260.0" y1="200.0" x2="780.0" y2="200.0" stroke="#DE2626" stroke-width="2.5" stroke-opacity="1.0" marker-end="url(#arrow-active)" />
-    <circle cx="317.72" cy="200.0" r="5" fill="#DE2626" filter="url(#node-red-glow)" />
-    <!-- Connector cms_admin->pages_db -->    <line x1="260.0" y1="360.0" x2="780.0" y2="360.0" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.4" marker-start="url(#arrow-forward)" marker-end="url(#arrow-forward)" />
-    <!-- Connector cms_editor->pages_db -->    <line x1="260.0" y1="520.0" x2="780.0" y2="360.0" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.4" marker-start="url(#arrow-forward)" marker-end="url(#arrow-forward)" />
-    <!-- Connector mfdb_master->pages_db -->    <line x1="780.0" y1="200.0" x2="780.0" y2="360.0" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.4" marker-end="url(#arrow-forward)" />
-    <!-- Connector pages_db->cms_publisher -->    <line x1="780.0" y1="360.0" x2="780.0" y2="520.0" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.4" marker-end="url(#arrow-forward)" />
-    <!-- Connector cms_editor->bks_engine -->    <line x1="260.0" y1="520.0" x2="1300.0" y2="200.0" stroke="#DE2626" stroke-width="2.5" stroke-opacity="1.0" marker-end="url(#arrow-active)" />
-    <circle cx="375.44" cy="484.48" r="5" fill="#DE2626" filter="url(#node-red-glow)" />
-    <!-- Connector bks_engine->cli_ai_dispatch -->    <line x1="1300.0" y1="200.0" x2="1300.0" y2="360.0" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.4" marker-start="url(#arrow-forward)" marker-end="url(#arrow-forward)" />
-    <!-- Connector bks_engine->graphics_105 -->    <line x1="1300.0" y1="200.0" x2="1300.0" y2="520.0" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.4" marker-end="url(#arrow-forward)" />
-    <!-- Connector graphics_105->pages_db -->    <line x1="1300.0" y1="520.0" x2="780.0" y2="360.0" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.4" marker-end="url(#arrow-forward)" />
-    <!-- Shape cms_cli -->    <g id="shape-cms_cli" opacity="1.0">      <rect x="160.0" y="150.0" width="200" height="100" rx="8" fill="#1c0d0d" stroke="#DE2626" stroke-width="2.5" filter="url(#node-red-glow)" />      <text x="172.0" y="174.0" fill="#FFFFFF" font-size="12" font-family="-apple-system, sans-serif" font-weight="bold">cms-manage.py CLI</text>
-      <text x="172.0" y="192.0" fill="#737373" font-size="10" font-family="-apple-system, sans-serif">Unified 57-col CLI router & automati...</text>
-      <circle cx="348.0" cy="162.0" r="4" fill="#DE2626" />
-    </g>
-    <!-- Shape cms_admin -->    <g id="shape-cms_admin" opacity="1.0">      <rect x="160.0" y="310.0" width="200" height="100" rx="8" fill="#121218" stroke="#FFFFFF" stroke-width="1.2"  />      <text x="172.0" y="334.0" fill="#FFFFFF" font-size="12" font-family="-apple-system, sans-serif" font-weight="bold">BEJSON_CMS_Admin :5000</text>
-      <text x="172.0" y="352.0" fill="#737373" font-size="10" font-family="-apple-system, sans-serif">Site master, navigation & media cons...</text>
-    </g>
-    <!-- Shape cms_editor -->    <g id="shape-cms_editor" opacity="1.0">      <rect x="160.0" y="470.0" width="200" height="100" rx="8" fill="#121218" stroke="#FFFFFF" stroke-width="1.2"  />      <text x="172.0" y="494.0" fill="#FFFFFF" font-size="12" font-family="-apple-system, sans-serif" font-weight="bold">BEJSON_CMS_PageEditor :5002</text>
-      <text x="172.0" y="512.0" fill="#737373" font-size="10" font-family="-apple-system, sans-serif">Authoritative page editor & BKS stud...</text>
-    </g>
-    <!-- Shape mfdb_master -->    <g id="shape-mfdb_master" opacity="1.0">      <rect x="680.0" y="150.0" width="200" height="100" rx="8" fill="#1c0d0d" stroke="#DE2626" stroke-width="2.5" filter="url(#node-red-glow)" />      <text x="692.0" y="174.0" fill="#FFFFFF" font-size="12" font-family="-apple-system, sans-serif" font-weight="bold">104a.mfdb.bejson</text>
-      <text x="692.0" y="192.0" fill="#737373" font-size="10" font-family="-apple-system, sans-serif">Master manifest, O(1) field map & lo...</text>
-      <circle cx="868.0" cy="162.0" r="4" fill="#DE2626" />
-    </g>
-    <!-- Shape pages_db -->    <g id="shape-pages_db" opacity="1.0">      <rect x="680.0" y="310.0" width="200" height="100" rx="8" fill="#121218" stroke="#FFFFFF" stroke-width="1.2"  />      <text x="692.0" y="334.0" fill="#FFFFFF" font-size="12" font-family="-apple-system, sans-serif" font-weight="bold">pagerecord & pages_db/</text>
-      <text x="692.0" y="352.0" fill="#737373" font-size="10" font-family="-apple-system, sans-serif">Two-part page records + mediaasset l...</text>
-    </g>
-    <!-- Shape cms_publisher -->    <g id="shape-cms_publisher" opacity="1.0">      <rect x="680.0" y="470.0" width="200" height="100" rx="8" fill="#121218" stroke="#FFFFFF" stroke-width="1.2"  />      <text x="692.0" y="494.0" fill="#FFFFFF" font-size="12" font-family="-apple-system, sans-serif" font-weight="bold">BEJSON_CMS_Publisher :5001</text>
-      <text x="692.0" y="512.0" fill="#737373" font-size="10" font-family="-apple-system, sans-serif">Static HTML, RSS/Atom & asset compil...</text>
-    </g>
-    <!-- Shape bks_engine -->    <g id="shape-bks_engine" opacity="1.0">      <rect x="1200.0" y="150.0" width="200" height="100" rx="8" fill="#1c0d0d" stroke="#DE2626" stroke-width="2.5" filter="url(#node-red-glow)" />      <text x="1212.0" y="174.0" fill="#FFFFFF" font-size="12" font-family="-apple-system, sans-serif" font-weight="bold">BKS-1 Blog Job Engine</text>
-      <text x="1212.0" y="192.0" fill="#737373" font-size="10" font-family="-apple-system, sans-serif">4-part technical article plan & writ...</text>
-      <circle cx="1388.0" cy="162.0" r="4" fill="#DE2626" />
-    </g>
-    <!-- Shape cli_ai_dispatch -->    <g id="shape-cli_ai_dispatch" opacity="1.0">      <rect x="1200.0" y="310.0" width="200" height="100" rx="8" fill="#121218" stroke="#FFFFFF" stroke-width="1.2"  />      <text x="1212.0" y="334.0" fill="#FFFFFF" font-size="12" font-family="-apple-system, sans-serif" font-weight="bold">CLI_AI REST Dispatch</text>
-      <text x="1212.0" y="352.0" fill="#737373" font-size="10" font-family="-apple-system, sans-serif">Gemini Interactions API & multi-prov...</text>
-    </g>
-    <!-- Shape graphics_105 -->    <g id="shape-graphics_105" opacity="1.0">      <rect x="1200.0" y="470.0" width="200" height="100" rx="8" fill="#121218" stroke="#FFFFFF" stroke-width="1.2"  />      <text x="1212.0" y="494.0" fill="#FFFFFF" font-size="12" font-family="-apple-system, sans-serif" font-weight="bold">Graphics 105 Triad</text>
-      <text x="1212.0" y="512.0" fill="#737373" font-size="10" font-family="-apple-system, sans-serif">1280x640 SVG + PNG + WebP hero & dia...</text>
-    </g>
-    <!-- Inspector Card for cms_admin -->    <g id="inspector-cms_admin">      <rect x="130.0" y="250.0" width="260" height="90" rx="6" fill="#0a0a0e" stroke="#DE2626" stroke-width="1.5" filter="url(#node-red-glow)" />      <text x="142.0" y="272.0" fill="#DE2626" font-size="12" font-family="monospace" font-weight="bold">INSPECT: cms_admin</text>      <text x="142.0" y="290.0" fill="#FFFFFF" font-size="11" font-family="-apple-system, sans-serif" font-weight="bold">BEJSON_CMS_Admin :5000</text>      <text x="142.0" y="308.0" fill="#737373" font-size="9" font-family="-apple-system, sans-serif">Site master, navigation & media console</text>    </g>
+<svg width="960" height="540" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+  <!-- Obsidian Substrate -->
+  <rect width="960" height="540" fill="#0A0A0C" />
+  <rect x="24" y="20" width="912" height="500" rx="0" fill="none" stroke="#1A1A24" stroke-width="1.5" />
+
+  <!-- Corner Precision Ticks -->
+  <path d="M 24 44 L 24 20 L 48 20" fill="none" stroke="#333342" stroke-width="2" />
+  <path d="M 912 20 L 936 20 L 936 44" fill="none" stroke="#333342" stroke-width="2" />
+  <path d="M 24 496 L 24 520 L 48 520" fill="none" stroke="#333342" stroke-width="2" />
+  <path d="M 912 520 L 936 520 L 936 496" fill="none" stroke="#333342" stroke-width="2" />
+
+  <!-- Header Strip -->
+  <rect x="24" y="20" width="912" height="60" fill="#0E0E14" stroke="#1A1A24" stroke-width="1" />
+  <rect x="24" y="20" width="6" height="60" fill="#DE2626" />
+  <text x="46" y="47" fill="#FFFFFF" font-size="16" font-family="system-ui, -apple-system, sans-serif" font-weight="800" letter-spacing="0.8">BEJSON_CMS // FOUR-SERVICE TOPOLOGY &amp; PUBLISHING PIPELINE</text>
+  <text x="46" y="67" fill="#888896" font-size="10.5" font-family="monospace" letter-spacing="1.5">ZERO-SQL ATOMIC PERSISTENCE · MFDB FLAT-FILE STORAGE · BKS-1 AI WRITER · GRAPHICS 105</text>
+
+  <!-- 3D Isometric Cube Visual Anchor -->
+  <g transform="translate(896, 50.00)">
+    <polygon points="0,-16 18,-6 0,4 -18,-6" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" />
+    <polygon points="-18,-6 0,4 0,22 -18,12" fill="#181820" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" />
+    <polygon points="0,4 18,-6 18,12 0,22" fill="#DE2626" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" />
   </g>
-  <!-- Canvas Status Telemetry Badge -->  <g id="canvas-hud">    <rect x="20" y="20" width="320" height="36" rx="4" fill="#0c0c12" fill-opacity="0.9" stroke="#22222c" stroke-width="1" />    <circle cx="36" cy="38" r="4" fill="#DE2626" />    <text x="52" y="42" fill="#FFFFFF" font-size="11" font-family="monospace" font-weight="bold" letter-spacing="1">STAGE 1 // BEJSON CMS FLAGSHIP OVER</text>  </g>
+
+  <!-- ================= ZONE 1: WEB SERVICES & CLI ================= -->
+  <g transform="translate(40, 94)">
+    <rect x="0" y="0" width="268" height="364" fill="#0C0C12" stroke="#DE2626" stroke-width="1.5" />
+    <rect x="0" y="0" width="268" height="28" fill="#14141E" stroke="#DE2626" stroke-width="1" />
+    <text x="12" y="19" fill="#FFFFFF" font-size="11" font-family="monospace" font-weight="700">01 · WEB SERVICES &amp; CLI TIER</text>
+
+    <!-- Card 1: CLI -->
+    <g transform="translate(11, 40)">
+      <rect x="0" y="0" width="246" height="92" fill="#12121A" stroke="#DE2626" stroke-width="1.4" />
+      <rect x="0" y="0" width="4" height="92" fill="#DE2626" />
+      <text x="12" y="22" fill="#FFFFFF" font-size="12" font-family="monospace" font-weight="800">cms-manage.py CLI</text>
+      <text x="12" y="40" fill="#DE2626" font-size="10" font-family="monospace">Unified 57-Col Router</text>
+      <text x="12" y="60" fill="#D1D5DB" font-size="9.5" font-family="system-ui, sans-serif">• Multi-service daemon controls</text>
+      <text x="12" y="78" fill="#D1D5DB" font-size="9.5" font-family="system-ui, sans-serif">• Reset, backup &amp; schema audit</text>
+    </g>
+
+    <!-- Card 2: Admin -->
+    <g transform="translate(11, 146)">
+      <rect x="0" y="0" width="246" height="92" fill="#12121A" stroke="#22222E" stroke-width="1.4" />
+      <rect x="0" y="0" width="4" height="92" fill="#FFFFFF" />
+      <text x="12" y="22" fill="#FFFFFF" font-size="12" font-family="monospace" font-weight="800">BEJSON_CMS_Admin :5000</text>
+      <text x="12" y="40" fill="#DE2626" font-size="10" font-family="monospace">Site Master &amp; Navigation</text>
+      <text x="12" y="60" fill="#D1D5DB" font-size="9.5" font-family="system-ui, sans-serif">• Taxonomy &amp; category routes</text>
+      <text x="12" y="78" fill="#D1D5DB" font-size="9.5" font-family="system-ui, sans-serif">• Media asset dropzone &amp; logs</text>
+    </g>
+
+    <!-- Card 3: PageEditor -->
+    <g transform="translate(11, 252)">
+      <rect x="0" y="0" width="246" height="92" fill="#12121A" stroke="#22222E" stroke-width="1.4" />
+      <rect x="0" y="0" width="4" height="92" fill="#DE2626" />
+      <text x="12" y="22" fill="#FFFFFF" font-size="12" font-family="monospace" font-weight="800">BEJSON_CMS_PageEditor :5002</text>
+      <text x="12" y="40" fill="#DE2626" font-size="10" font-family="monospace">Authoritative Editor</text>
+      <text x="12" y="60" fill="#D1D5DB" font-size="9.5" font-family="system-ui, sans-serif">• Pure-HTML visual composing</text>
+      <text x="12" y="78" fill="#D1D5DB" font-size="9.5" font-family="system-ui, sans-serif">• BKS-1 AI post integration</text>
+    </g>
+  </g>
+
+  <!-- Connectors Zone 1 -> Zone 2 -->
+  <line x1="308" y1="180" x2="362" y2="180" stroke="#DE2626" stroke-width="2" stroke-dasharray="6 4" stroke-dashoffset="-0" />
+  <line x1="308" y1="286" x2="362" y2="286" stroke="#DE2626" stroke-width="2" stroke-dasharray="6 4" stroke-dashoffset="-0" />
+  <line x1="308" y1="392" x2="362" y2="392" stroke="#DE2626" stroke-width="2" stroke-dasharray="6 4" stroke-dashoffset="-0" />
+
+  <!-- Animated Packet traveling Z1 -> Z2 -->
+  <circle cx="286" cy="180" r="4.5" fill="#DE2626" />
+
+  <!-- ================= ZONE 2: MFDB STORAGE ================= -->
+  <g transform="translate(362, 94)">
+    <rect x="0" y="0" width="268" height="364" fill="#0C0C12" stroke="#DE2626" stroke-width="1.5" />
+    <rect x="0" y="0" width="268" height="28" fill="#14141E" stroke="#DE2626" stroke-width="1" />
+    <text x="12" y="19" fill="#FFFFFF" font-size="11" font-family="monospace" font-weight="700">02 · MFDB STORAGE &amp; BUILD</text>
+
+    <!-- Card 4: MFDB Master -->
+    <g transform="translate(11, 40)">
+      <rect x="0" y="0" width="246" height="92" fill="#12121A" stroke="#DE2626" stroke-width="1.4" />
+      <rect x="0" y="0" width="4" height="92" fill="#DE2626" />
+      <text x="12" y="22" fill="#FFFFFF" font-size="12" font-family="monospace" font-weight="800">104a.mfdb.bejson</text>
+      <text x="12" y="40" fill="#DE2626" font-size="10" font-family="monospace">Master Manifest Ledger</text>
+      <text x="12" y="60" fill="#D1D5DB" font-size="9.5" font-family="system-ui, sans-serif">• O(1) field map index cache</text>
+      <text x="12" y="78" fill="#D1D5DB" font-size="9.5" font-family="system-ui, sans-serif">• Entity relationships &amp; locks</text>
+    </g>
+
+    <!-- Card 5: Two-Part Page Storage -->
+    <g transform="translate(11, 146)">
+      <rect x="0" y="0" width="246" height="92" fill="#12121A" stroke="#22222E" stroke-width="1.4" />
+      <rect x="0" y="0" width="4" height="92" fill="#FFFFFF" />
+      <text x="12" y="22" fill="#FFFFFF" font-size="12" font-family="monospace" font-weight="800">pages_db/ &amp; pagerecord</text>
+      <text x="12" y="40" fill="#DE2626" font-size="10" font-family="monospace">Two-Part Flat-File Model</text>
+      <text x="12" y="60" fill="#D1D5DB" font-size="9.5" font-family="system-ui, sans-serif">• Clean HTML body + BEJSON meta</text>
+      <text x="12" y="78" fill="#D1D5DB" font-size="9.5" font-family="system-ui, sans-serif">• Atomic temporary file rename</text>
+    </g>
+
+    <!-- Card 6: Publisher -->
+    <g transform="translate(11, 252)">
+      <rect x="0" y="0" width="246" height="92" fill="#12121A" stroke="#22222E" stroke-width="1.4" />
+      <rect x="0" y="0" width="4" height="92" fill="#DE2626" />
+      <text x="12" y="22" fill="#FFFFFF" font-size="12" font-family="monospace" font-weight="800">BEJSON_CMS_Publisher :5001</text>
+      <text x="12" y="40" fill="#DE2626" font-size="10" font-family="monospace">Static Compilation</text>
+      <text x="12" y="60" fill="#D1D5DB" font-size="9.5" font-family="system-ui, sans-serif">• Jinja2 theme rendering</text>
+      <text x="12" y="78" fill="#D1D5DB" font-size="9.5" font-family="system-ui, sans-serif">• Static dist/, RSS/Atom &amp; assets</text>
+    </g>
+  </g>
+
+  <!-- Connectors Zone 2 -> Zone 3 -->
+  <line x1="630" y1="180" x2="684" y2="180" stroke="#DE2626" stroke-width="2" stroke-dasharray="6 4" stroke-dashoffset="-0" />
+  <line x1="630" y1="286" x2="684" y2="286" stroke="#DE2626" stroke-width="2" stroke-dasharray="6 4" stroke-dashoffset="-0" />
+  <line x1="630" y1="392" x2="684" y2="392" stroke="#DE2626" stroke-width="2" stroke-dasharray="6 4" stroke-dashoffset="-0" />
+
+  <!-- Animated Packet traveling Z2 -> Z3 -->
+  <circle cx="608" cy="286" r="4.5" fill="#DE2626" />
+
+  <!-- ================= ZONE 3: BKS-1 AI & GRAPHICS 105 ================= -->
+  <g transform="translate(684, 94)">
+    <rect x="0" y="0" width="236" height="364" fill="#0C0C12" stroke="#262636" stroke-width="1.5" />
+    <rect x="0" y="0" width="236" height="28" fill="#14141E" stroke="#262636" stroke-width="1" />
+    <text x="12" y="19" fill="#FFFFFF" font-size="11" font-family="monospace" font-weight="700">03 · BKS-1 AI &amp; GRAPHICS 105</text>
+
+    <!-- Card 7: BKS Engine -->
+    <g transform="translate(10, 40)">
+      <rect x="0" y="0" width="216" height="92" fill="#12121A" stroke="#22222E" stroke-width="1.4" />
+      <rect x="0" y="0" width="4" height="92" fill="#DE2626" />
+      <text x="12" y="22" fill="#FFFFFF" font-size="12" font-family="monospace" font-weight="800">BKS-1 Blog Job Engine</text>
+      <text x="12" y="40" fill="#DE2626" font-size="10" font-family="monospace">Automated Authoring</text>
+      <text x="12" y="60" fill="#D1D5DB" font-size="9.5" font-family="system-ui, sans-serif">• 4-part deep technical plan</text>
+      <text x="12" y="78" fill="#D1D5DB" font-size="9.5" font-family="system-ui, sans-serif">• Draft, review, render &amp; post</text>
+    </g>
+
+    <!-- Card 8: CLI AI Dispatch -->
+    <g transform="translate(10, 146)">
+      <rect x="0" y="0" width="216" height="92" fill="#12121A" stroke="#22222E" stroke-width="1.4" />
+      <rect x="0" y="0" width="4" height="92" fill="#FFFFFF" />
+      <text x="12" y="22" fill="#FFFFFF" font-size="12" font-family="monospace" font-weight="800">CLI_AI REST Dispatch</text>
+      <text x="12" y="40" fill="#DE2626" font-size="10" font-family="monospace">Zero-SDK AI Engine</text>
+      <text x="12" y="60" fill="#D1D5DB" font-size="9.5" font-family="system-ui, sans-serif">• Gemini Interactions API</text>
+      <text x="12" y="78" fill="#D1D5DB" font-size="9.5" font-family="system-ui, sans-serif">• Stateful multi-turn loops</text>
+    </g>
+
+    <!-- Card 9: Graphics 105 -->
+    <g transform="translate(10, 252)">
+      <rect x="0" y="0" width="216" height="92" fill="#12121A" stroke="#22222E" stroke-width="1.4" />
+      <rect x="0" y="0" width="4" height="92" fill="#DE2626" />
+      <text x="12" y="22" fill="#FFFFFF" font-size="12" font-family="monospace" font-weight="800">Graphics 105 Triad</text>
+      <text x="12" y="40" fill="#DE2626" font-size="10" font-family="monospace">Visual Asset Engine</text>
+      <text x="12" y="60" fill="#D1D5DB" font-size="9.5" font-family="system-ui, sans-serif">• 1280x640 SVG vector hero</text>
+      <text x="12" y="78" fill="#D1D5DB" font-size="9.5" font-family="system-ui, sans-serif">• WebP &amp; PNG synchronized</text>
+    </g>
+  </g>
+
+  <!-- ================= BOTTOM TELEMETRY STATUS STRIP ================= -->
+  <rect x="24" y="468" width="912" height="52" fill="#0E0E14" stroke="#1A1A24" stroke-width="1" />
+  <circle cx="44" cy="494" r="5" fill="#DE2626" />
+  <text x="58" y="498" fill="#FFFFFF" font-size="11.5" font-family="monospace" font-weight="700">STAGE 1 // CLI DISPATCH</text>
+  <text x="310" y="498" fill="#888896" font-size="10.5" font-family="monospace">│ cms-manage.py parses command & routes to 104a.mfdb.bejson master manifest</text>
 </svg>
