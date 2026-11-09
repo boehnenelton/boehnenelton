@@ -1,0 +1,185 @@
+{
+  "Format": "BEJSON",
+  "Format_Version": "104a",
+  "Format_Creator": "Elton Boehnen",
+  "Schema_Name": "MFDB-132",
+  "Schema_Version": "1.32",
+  "Schema_Description": "MFDB 1.32 single-file diagram package.",
+  "Chunk_Date": "2026-11-09T11:26:29Z",
+  "Session_Is_Mounted": false,
+  "Mount_Path": "",
+  "Package_Version": "1",
+  "MFDB_Version": "1.32",
+  "DB_Name": "bejson_cms_publishing_arch",
+  "Package_Format": "MFDB-Chunked-104a",
+  "Diagram_Schema": "BEJSON-Diagram-1",
+  "Records_Type": [
+    "MFDB-132"
+  ],
+  "Fields": [
+    {
+      "name": "File_Name",
+      "type": "string"
+    },
+    {
+      "name": "File_Extension",
+      "type": "string"
+    },
+    {
+      "name": "File_Content",
+      "type": "string"
+    },
+    {
+      "name": "File_Version",
+      "type": "string"
+    },
+    {
+      "name": "File_Hash",
+      "type": "string"
+    },
+    {
+      "name": "Relative_Path",
+      "type": "string"
+    },
+    {
+      "name": "Is_Binary",
+      "type": "boolean"
+    },
+    {
+      "name": "Is_Mounted",
+      "type": "boolean"
+    }
+  ],
+  "Values": [
+    [
+      "104a.mfdb.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104a\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"MFDB_Version\": \"1.32\",\n  \"Network_Role\": \"Master\",\n  \"DB_Name\": \"bejson_cms_publishing_arch\",\n  \"DB_Description\": \"End-to-end architecture of BEJSON CMS: Flask web services, CLI management, MFDB flat-file persistence, BKS-1 AI authoring, Graphics 105 asset triad, and static HTML compilation.\",\n  \"Schema_Version\": \"1.0.0\",\n  \"Author\": \"Elton Boehnen\",\n  \"Created_At\": \"2026-11-09T11:25:00Z\",\n  \"Records_Type\": [\n    \"mfdb\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"entity_name\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"file_path\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"description\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"record_count\",\n      \"type\": \"integer\"\n    },\n    {\n      \"name\": \"schema_version\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"primary_key\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"Board\",\n      \"data/board.bejson\",\n      \"Diagram board shapes registry\",\n      9,\n      \"1.0\",\n      \"shape_id\"\n    ],\n    [\n      \"Connector\",\n      \"data/connector.bejson\",\n      \"Diagram connectors\",\n      11,\n      \"1.0\",\n      \"conn_id\"\n    ],\n    [\n      \"Territory\",\n      \"data/territory.bejson\",\n      \"Diagram territories\",\n      3,\n      \"1.0\",\n      \"terr_id\"\n    ],\n    [\n      \"Shape_cms_cli\",\n      \"data/shape_cms_cli.bejson\",\n      \"Private entity for Shape_cms_cli\",\n      1,\n      \"1.0\",\n      \"board_membership_fk\"\n    ],\n    [\n      \"Shape_cms_admin\",\n      \"data/shape_cms_admin.bejson\",\n      \"Private entity for Shape_cms_admin\",\n      1,\n      \"1.0\",\n      \"board_membership_fk\"\n    ],\n    [\n      \"Shape_cms_editor\",\n      \"data/shape_cms_editor.bejson\",\n      \"Private entity for Shape_cms_editor\",\n      1,\n      \"1.0\",\n      \"board_membership_fk\"\n    ],\n    [\n      \"Shape_mfdb_master\",\n      \"data/shape_mfdb_master.bejson\",\n      \"Private entity for Shape_mfdb_master\",\n      1,\n      \"1.0\",\n      \"board_membership_fk\"\n    ],\n    [\n      \"Shape_pages_db\",\n      \"data/shape_pages_db.bejson\",\n      \"Private entity for Shape_pages_db\",\n      1,\n      \"1.0\",\n      \"board_membership_fk\"\n    ],\n    [\n      \"Shape_cms_publisher\",\n      \"data/shape_cms_publisher.bejson\",\n      \"Private entity for Shape_cms_publisher\",\n      1,\n      \"1.0\",\n      \"board_membership_fk\"\n    ],\n    [\n      \"Shape_bks_engine\",\n      \"data/shape_bks_engine.bejson\",\n      \"Private entity for Shape_bks_engine\",\n      1,\n      \"1.0\",\n      \"board_membership_fk\"\n    ],\n    [\n      \"Shape_cli_ai_dispatch\",\n      \"data/shape_cli_ai_dispatch.bejson\",\n      \"Private entity for Shape_cli_ai_dispatch\",\n      1,\n      \"1.0\",\n      \"board_membership_fk\"\n    ],\n    [\n      \"Shape_graphics_105\",\n      \"data/shape_graphics_105.bejson\",\n      \"Private entity for Shape_graphics_105\",\n      1,\n      \"1.0\",\n      \"board_membership_fk\"\n    ]\n  ]\n}",
+      "1.32",
+      "e2e646bedc21e65490c4c0c5b35113602a2be533b4496ad95e039f171298b1d9",
+      "104a.mfdb.bejson",
+      false,
+      false
+    ],
+    [
+      "board.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Board\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"shape_id\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_entity_name\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_cx\",\n      \"type\": \"number\"\n    },\n    {\n      \"name\": \"shape_cy\",\n      \"type\": \"number\"\n    },\n    {\n      \"name\": \"shape_size_class\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_kind\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_parent_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_collapsed\",\n      \"type\": \"boolean\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"cms_cli\",\n      \"Shape_cms_cli\",\n      260.0,\n      200.0,\n      \"medium\",\n      \"rect\",\n      null,\n      false\n    ],\n    [\n      \"cms_admin\",\n      \"Shape_cms_admin\",\n      260.0,\n      360.0,\n      \"medium\",\n      \"rect\",\n      \"cms_cli\",\n      false\n    ],\n    [\n      \"cms_editor\",\n      \"Shape_cms_editor\",\n      260.0,\n      520.0,\n      \"medium\",\n      \"rect\",\n      \"cms_admin\",\n      false\n    ],\n    [\n      \"mfdb_master\",\n      \"Shape_mfdb_master\",\n      780.0,\n      200.0,\n      \"medium\",\n      \"rect\",\n      null,\n      false\n    ],\n    [\n      \"pages_db\",\n      \"Shape_pages_db\",\n      780.0,\n      360.0,\n      \"medium\",\n      \"rect\",\n      \"mfdb_master\",\n      false\n    ],\n    [\n      \"cms_publisher\",\n      \"Shape_cms_publisher\",\n      780.0,\n      520.0,\n      \"medium\",\n      \"rect\",\n      \"pages_db\",\n      false\n    ],\n    [\n      \"bks_engine\",\n      \"Shape_bks_engine\",\n      1300.0,\n      200.0,\n      \"medium\",\n      \"rect\",\n      null,\n      false\n    ],\n    [\n      \"cli_ai_dispatch\",\n      \"Shape_cli_ai_dispatch\",\n      1300.0,\n      360.0,\n      \"medium\",\n      \"rect\",\n      \"bks_engine\",\n      false\n    ],\n    [\n      \"graphics_105\",\n      \"Shape_graphics_105\",\n      1300.0,\n      520.0,\n      \"medium\",\n      \"rect\",\n      \"bks_engine\",\n      false\n    ]\n  ]\n}",
+      "1.0.0",
+      "b697f1fa0aba5148e750f1d2e51e581d0289233b4fa0ef311e4879c67de72ec3",
+      "data/board.bejson",
+      false,
+      false
+    ],
+    [
+      "connector.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Connector\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"conn_id\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"conn_from_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"conn_to_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"conn_flow\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"c1\",\n      \"cms_cli\",\n      \"cms_admin\",\n      \"forward\"\n    ],\n    [\n      \"c2\",\n      \"cms_admin\",\n      \"cms_editor\",\n      \"bidirectional\"\n    ],\n    [\n      \"c3\",\n      \"cms_cli\",\n      \"mfdb_master\",\n      \"forward\"\n    ],\n    [\n      \"c4\",\n      \"cms_admin\",\n      \"pages_db\",\n      \"bidirectional\"\n    ],\n    [\n      \"c5\",\n      \"cms_editor\",\n      \"pages_db\",\n      \"bidirectional\"\n    ],\n    [\n      \"c6\",\n      \"mfdb_master\",\n      \"pages_db\",\n      \"forward\"\n    ],\n    [\n      \"c7\",\n      \"pages_db\",\n      \"cms_publisher\",\n      \"forward\"\n    ],\n    [\n      \"c8\",\n      \"cms_editor\",\n      \"bks_engine\",\n      \"forward\"\n    ],\n    [\n      \"c9\",\n      \"bks_engine\",\n      \"cli_ai_dispatch\",\n      \"bidirectional\"\n    ],\n    [\n      \"c10\",\n      \"bks_engine\",\n      \"graphics_105\",\n      \"forward\"\n    ],\n    [\n      \"c11\",\n      \"graphics_105\",\n      \"pages_db\",\n      \"forward\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "d3584c25b1ae892a63a2fd74c87ca02335549deec901b497c1cdf7ea77c36f94",
+      "data/connector.bejson",
+      false,
+      false
+    ],
+    [
+      "territory.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Territory\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"terr_id\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"terr_kind\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"terr_cx\",\n      \"type\": \"number\"\n    },\n    {\n      \"name\": \"terr_cy\",\n      \"type\": \"number\"\n    },\n    {\n      \"name\": \"terr_size\",\n      \"type\": \"number\"\n    },\n    {\n      \"name\": \"terr_label\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"terr_color\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"zone_services\",\n      \"rect\",\n      260.0,\n      360.0,\n      440.0,\n      \"1. Web Services & CLI Tier\",\n      \"#DE2626\"\n    ],\n    [\n      \"zone_mfdb\",\n      \"rect\",\n      780.0,\n      360.0,\n      440.0,\n      \"2. MFDB Storage & Static Build\",\n      \"#FFFFFF\"\n    ],\n    [\n      \"zone_ai_graphics\",\n      \"rect\",\n      1300.0,\n      360.0,\n      440.0,\n      \"3. BKS-1 AI & Graphics 105\",\n      \"#DE2626\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "521e4d06c65f019543a9dc9e42c7fad86137e910282ea3b3a416ab279e42c056",
+      "data/territory.bejson",
+      false,
+      false
+    ],
+    [
+      "shape_cms_cli.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Shape_cms_cli\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"board_membership_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_label\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_font_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_text\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"cms_cli\",\n      \"cms-manage.py CLI\",\n      \"#181820\",\n      \"#ffffff\",\n      \"Unified 57-col CLI router & automation\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "a28d80f462dd09dba142bfbbfb3c69ba38311040499e6fcce65a8e3f0f409ba5",
+      "data/shape_cms_cli.bejson",
+      false,
+      false
+    ],
+    [
+      "shape_cms_admin.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Shape_cms_admin\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"board_membership_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_label\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_font_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_text\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"cms_admin\",\n      \"BEJSON_CMS_Admin :5000\",\n      \"#181820\",\n      \"#ffffff\",\n      \"Site master, navigation & media console\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "8d5ac47c2fa73358285d05382e844f1d9eab7ac3ae69137f8a983aae7f792776",
+      "data/shape_cms_admin.bejson",
+      false,
+      false
+    ],
+    [
+      "shape_cms_editor.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Shape_cms_editor\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"board_membership_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_label\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_font_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_text\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"cms_editor\",\n      \"BEJSON_CMS_PageEditor :5002\",\n      \"#181820\",\n      \"#ffffff\",\n      \"Authoritative page editor & BKS studio\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "24e64a4a96fa2320bafd53d47fd58193065f6ca316ee9d3448125aeb21f7e069",
+      "data/shape_cms_editor.bejson",
+      false,
+      false
+    ],
+    [
+      "shape_mfdb_master.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Shape_mfdb_master\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"board_membership_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_label\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_font_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_text\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"mfdb_master\",\n      \"104a.mfdb.bejson\",\n      \"#181820\",\n      \"#ffffff\",\n      \"Master manifest, O(1) field map & locks\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "6f1d9c4d29f81b77a5970cb316af360c9a4b204902245227f5be28c6e1fcf903",
+      "data/shape_mfdb_master.bejson",
+      false,
+      false
+    ],
+    [
+      "shape_pages_db.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Shape_pages_db\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"board_membership_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_label\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_font_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_text\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"pages_db\",\n      \"pagerecord & pages_db/\",\n      \"#181820\",\n      \"#ffffff\",\n      \"Two-part page records + mediaasset ledger\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "07851450ac4e1777e904be56afe47f701edc77a92684890465e1df7b336026a9",
+      "data/shape_pages_db.bejson",
+      false,
+      false
+    ],
+    [
+      "shape_cms_publisher.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Shape_cms_publisher\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"board_membership_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_label\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_font_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_text\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"cms_publisher\",\n      \"BEJSON_CMS_Publisher :5001\",\n      \"#181820\",\n      \"#ffffff\",\n      \"Static HTML, RSS/Atom & asset compiler\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "ebc2e6de881b19eca5aabf25c6248c6031663dfa0cf21b56effb3da592512b2c",
+      "data/shape_cms_publisher.bejson",
+      false,
+      false
+    ],
+    [
+      "shape_bks_engine.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Shape_bks_engine\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"board_membership_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_label\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_font_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_text\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"bks_engine\",\n      \"BKS-1 Blog Job Engine\",\n      \"#181820\",\n      \"#ffffff\",\n      \"4-part technical article plan & writer\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "833571b860e3f2312568df62dfa2aaf999da753ad6e1acdf759723c5b70485a0",
+      "data/shape_bks_engine.bejson",
+      false,
+      false
+    ],
+    [
+      "shape_cli_ai_dispatch.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Shape_cli_ai_dispatch\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"board_membership_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_label\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_font_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_text\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"cli_ai_dispatch\",\n      \"CLI_AI REST Dispatch\",\n      \"#181820\",\n      \"#ffffff\",\n      \"Gemini Interactions API & multi-provider\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "8cfec46cc23e732259568625ba89f42007b1e7bc304ebf08ca69db94026cc5ee",
+      "data/shape_cli_ai_dispatch.bejson",
+      false,
+      false
+    ],
+    [
+      "shape_graphics_105.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Shape_graphics_105\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"board_membership_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_label\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_font_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_text\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"graphics_105\",\n      \"Graphics 105 Triad\",\n      \"#181820\",\n      \"#ffffff\",\n      \"1280x640 SVG + PNG + WebP hero & diagrams\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "7f6bce5b5c8f8d0031f160d58a8a6c39800a4fe1de3e5558380b799596cd92af",
+      "data/shape_graphics_105.bejson",
+      false,
+      false
+    ]
+  ]
+}

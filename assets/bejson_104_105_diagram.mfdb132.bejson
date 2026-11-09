@@ -1,0 +1,185 @@
+{
+  "Format": "BEJSON",
+  "Format_Version": "104a",
+  "Format_Creator": "Elton Boehnen",
+  "Schema_Name": "MFDB-132",
+  "Schema_Version": "1.32",
+  "Schema_Description": "MFDB 1.32 single-file diagram package.",
+  "Chunk_Date": "2026-11-09T11:26:29Z",
+  "Session_Is_Mounted": false,
+  "Mount_Path": "",
+  "Package_Version": "1",
+  "MFDB_Version": "1.32",
+  "DB_Name": "bejson_104_105_libraries_arch",
+  "Package_Format": "MFDB-Chunked-104a",
+  "Diagram_Schema": "BEJSON-Diagram-1",
+  "Records_Type": [
+    "MFDB-132"
+  ],
+  "Fields": [
+    {
+      "name": "File_Name",
+      "type": "string"
+    },
+    {
+      "name": "File_Extension",
+      "type": "string"
+    },
+    {
+      "name": "File_Content",
+      "type": "string"
+    },
+    {
+      "name": "File_Version",
+      "type": "string"
+    },
+    {
+      "name": "File_Hash",
+      "type": "string"
+    },
+    {
+      "name": "Relative_Path",
+      "type": "string"
+    },
+    {
+      "name": "Is_Binary",
+      "type": "boolean"
+    },
+    {
+      "name": "Is_Mounted",
+      "type": "boolean"
+    }
+  ],
+  "Values": [
+    [
+      "104a.mfdb.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104a\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"MFDB_Version\": \"1.32\",\n  \"Network_Role\": \"Master\",\n  \"DB_Name\": \"bejson_104_105_libraries_arch\",\n  \"DB_Description\": \"Architectural map of Foundational Era (104/104a/104db) and Integrity Era (105/105a/105db) Python and JavaScript libraries.\",\n  \"Schema_Version\": \"1.0.0\",\n  \"Author\": \"Elton Boehnen\",\n  \"Created_At\": \"2026-11-09T11:25:00Z\",\n  \"Records_Type\": [\n    \"mfdb\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"entity_name\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"file_path\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"description\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"record_count\",\n      \"type\": \"integer\"\n    },\n    {\n      \"name\": \"schema_version\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"primary_key\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"Board\",\n      \"data/board.bejson\",\n      \"Diagram board shapes registry\",\n      9,\n      \"1.0\",\n      \"shape_id\"\n    ],\n    [\n      \"Connector\",\n      \"data/connector.bejson\",\n      \"Diagram connectors\",\n      9,\n      \"1.0\",\n      \"conn_id\"\n    ],\n    [\n      \"Territory\",\n      \"data/territory.bejson\",\n      \"Diagram territories\",\n      3,\n      \"1.0\",\n      \"terr_id\"\n    ],\n    [\n      \"Shape_lib104_core\",\n      \"data/shape_lib104_core.bejson\",\n      \"Private entity for Shape_lib104_core\",\n      1,\n      \"1.0\",\n      \"board_membership_fk\"\n    ],\n    [\n      \"Shape_lib104_ai_cms\",\n      \"data/shape_lib104_ai_cms.bejson\",\n      \"Private entity for Shape_lib104_ai_cms\",\n      1,\n      \"1.0\",\n      \"board_membership_fk\"\n    ],\n    [\n      \"Shape_lib104_html_diag\",\n      \"data/shape_lib104_html_diag.bejson\",\n      \"Private entity for Shape_lib104_html_diag\",\n      1,\n      \"1.0\",\n      \"board_membership_fk\"\n    ],\n    [\n      \"Shape_lib105_core\",\n      \"data/shape_lib105_core.bejson\",\n      \"Private entity for Shape_lib105_core\",\n      1,\n      \"1.0\",\n      \"board_membership_fk\"\n    ],\n    [\n      \"Shape_lib105_graphics\",\n      \"data/shape_lib105_graphics.bejson\",\n      \"Private entity for Shape_lib105_graphics\",\n      1,\n      \"1.0\",\n      \"board_membership_fk\"\n    ],\n    [\n      \"Shape_lib105_tax_std\",\n      \"data/shape_lib105_tax_std.bejson\",\n      \"Private entity for Shape_lib105_tax_std\",\n      1,\n      \"1.0\",\n      \"board_membership_fk\"\n    ],\n    [\n      \"Shape_app_bejson_cms\",\n      \"data/shape_app_bejson_cms.bejson\",\n      \"Private entity for Shape_app_bejson_cms\",\n      1,\n      \"1.0\",\n      \"board_membership_fk\"\n    ],\n    [\n      \"Shape_app_cli_ai\",\n      \"data/shape_app_cli_ai.bejson\",\n      \"Private entity for Shape_app_cli_ai\",\n      1,\n      \"1.0\",\n      \"board_membership_fk\"\n    ],\n    [\n      \"Shape_app_newagent\",\n      \"data/shape_app_newagent.bejson\",\n      \"Private entity for Shape_app_newagent\",\n      1,\n      \"1.0\",\n      \"board_membership_fk\"\n    ]\n  ]\n}",
+      "1.32",
+      "2d98b15a1c440c4d2fbdc09046939c16ca2cb40ed87fe91fbda0ed12d834e87d",
+      "104a.mfdb.bejson",
+      false,
+      false
+    ],
+    [
+      "board.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Board\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"shape_id\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_entity_name\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_cx\",\n      \"type\": \"number\"\n    },\n    {\n      \"name\": \"shape_cy\",\n      \"type\": \"number\"\n    },\n    {\n      \"name\": \"shape_size_class\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_kind\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_parent_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_collapsed\",\n      \"type\": \"boolean\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"lib104_core\",\n      \"Shape_lib104_core\",\n      260.0,\n      200.0,\n      \"medium\",\n      \"rect\",\n      null,\n      false\n    ],\n    [\n      \"lib104_ai_cms\",\n      \"Shape_lib104_ai_cms\",\n      260.0,\n      360.0,\n      \"medium\",\n      \"rect\",\n      \"lib104_core\",\n      false\n    ],\n    [\n      \"lib104_html_diag\",\n      \"Shape_lib104_html_diag\",\n      260.0,\n      520.0,\n      \"medium\",\n      \"rect\",\n      \"lib104_core\",\n      false\n    ],\n    [\n      \"lib105_core\",\n      \"Shape_lib105_core\",\n      780.0,\n      200.0,\n      \"medium\",\n      \"rect\",\n      null,\n      false\n    ],\n    [\n      \"lib105_graphics\",\n      \"Shape_lib105_graphics\",\n      780.0,\n      360.0,\n      \"medium\",\n      \"rect\",\n      \"lib105_core\",\n      false\n    ],\n    [\n      \"lib105_tax_std\",\n      \"Shape_lib105_tax_std\",\n      780.0,\n      520.0,\n      \"medium\",\n      \"rect\",\n      \"lib105_core\",\n      false\n    ],\n    [\n      \"app_bejson_cms\",\n      \"Shape_app_bejson_cms\",\n      1300.0,\n      200.0,\n      \"medium\",\n      \"rect\",\n      null,\n      false\n    ],\n    [\n      \"app_cli_ai\",\n      \"Shape_app_cli_ai\",\n      1300.0,\n      360.0,\n      \"medium\",\n      \"rect\",\n      null,\n      false\n    ],\n    [\n      \"app_newagent\",\n      \"Shape_app_newagent\",\n      1300.0,\n      520.0,\n      \"medium\",\n      \"rect\",\n      null,\n      false\n    ]\n  ]\n}",
+      "1.0.0",
+      "68b01c2cb94fc58a0af78b2948df57933874a8d8abf522758f53cac2a45bd0e9",
+      "data/board.bejson",
+      false,
+      false
+    ],
+    [
+      "connector.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Connector\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"conn_id\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"conn_from_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"conn_to_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"conn_flow\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"l1\",\n      \"lib104_core\",\n      \"lib104_ai_cms\",\n      \"forward\"\n    ],\n    [\n      \"l2\",\n      \"lib104_core\",\n      \"lib104_html_diag\",\n      \"forward\"\n    ],\n    [\n      \"l3\",\n      \"lib104_core\",\n      \"lib105_core\",\n      \"forward\"\n    ],\n    [\n      \"l4\",\n      \"lib105_core\",\n      \"lib105_graphics\",\n      \"forward\"\n    ],\n    [\n      \"l5\",\n      \"lib105_core\",\n      \"lib105_tax_std\",\n      \"forward\"\n    ],\n    [\n      \"l6\",\n      \"lib104_ai_cms\",\n      \"app_bejson_cms\",\n      \"forward\"\n    ],\n    [\n      \"l7\",\n      \"lib105_graphics\",\n      \"app_bejson_cms\",\n      \"forward\"\n    ],\n    [\n      \"l8\",\n      \"lib104_ai_cms\",\n      \"app_cli_ai\",\n      \"forward\"\n    ],\n    [\n      \"l9\",\n      \"lib105_tax_std\",\n      \"app_newagent\",\n      \"forward\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "6c9616a66862e366473a4d9fd8185ea3b8920e296f668043588916c9097ba22b",
+      "data/connector.bejson",
+      false,
+      false
+    ],
+    [
+      "territory.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Territory\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"terr_id\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"terr_kind\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"terr_cx\",\n      \"type\": \"number\"\n    },\n    {\n      \"name\": \"terr_cy\",\n      \"type\": \"number\"\n    },\n    {\n      \"name\": \"terr_size\",\n      \"type\": \"number\"\n    },\n    {\n      \"name\": \"terr_label\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"terr_color\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"zone_lib104\",\n      \"rect\",\n      260.0,\n      360.0,\n      440.0,\n      \"Foundational Era (libraries_104)\",\n      \"#FFFFFF\"\n    ],\n    [\n      \"zone_lib105\",\n      \"rect\",\n      780.0,\n      360.0,\n      440.0,\n      \"Integrity Era (libraries_105)\",\n      \"#DE2626\"\n    ],\n    [\n      \"zone_apps\",\n      \"rect\",\n      1300.0,\n      360.0,\n      440.0,\n      \"Flagship Runtime Platforms\",\n      \"#FFFFFF\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "c8c2b714aa9315e2aa95df25e18c791a2c781cfbd464010a2b76740966d57927",
+      "data/territory.bejson",
+      false,
+      false
+    ],
+    [
+      "shape_lib104_core.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Shape_lib104_core\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"board_membership_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_label\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_font_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_text\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"lib104_core\",\n      \"104 Core & MFDB v1.31\",\n      \"#181820\",\n      \"#ffffff\",\n      \"O(1) Field Map Cache, 104/104a/104db CRUD\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "1bcc98c0f9dd9622b508186788d078b391e85b02798cedd5d5d2677d2efacfcd",
+      "data/shape_lib104_core.bejson",
+      false,
+      false
+    ],
+    [
+      "shape_lib104_ai_cms.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Shape_lib104_ai_cms\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"board_membership_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_label\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_font_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_text\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"lib104_ai_cms\",\n      \"104 AI, CMS & Writing\",\n      \"#181820\",\n      \"#ffffff\",\n      \"Interactions API, BKS-1, Chunker & Projects\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "7029d04f98d1d2c71941710e84247494bf70f064bdd9c68a0c3101f5e745b65d",
+      "data/shape_lib104_ai_cms.bejson",
+      false,
+      false
+    ],
+    [
+      "shape_lib104_html_diag.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Shape_lib104_html_diag\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"board_membership_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_label\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_font_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_text\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"lib104_html_diag\",\n      \"104 BEHTML, HTML & Diagrams\",\n      \"#181820\",\n      \"#ffffff\",\n      \"8-lane Ry=32px UI grids & Diagrammer core\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "479bc828f5adee4a861054ee49dd3b7485b922eff238d5639a1c4bba0279b5e2",
+      "data/shape_lib104_html_diag.bejson",
+      false,
+      false
+    ],
+    [
+      "shape_lib105_core.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Shape_lib105_core\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"board_membership_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_label\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_font_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_text\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"lib105_core\",\n      \"105 Core & MFDB v1.40\",\n      \"#181820\",\n      \"#ffffff\",\n      \"UUIDv4 record keys, SHA-256 & FK cascades\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "07064272b72cf88208af7b32dc2e18b9bcfc5937f74a4e7a26422346422a129a",
+      "data/shape_lib105_core.bejson",
+      false,
+      false
+    ],
+    [
+      "shape_lib105_graphics.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Shape_lib105_graphics\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"board_membership_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_label\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_font_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_text\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"lib105_graphics\",\n      \"105 Graphics & Canvas\",\n      \"#181820\",\n      \"#ffffff\",\n      \"Row-per-frame 105a timelines, SVG/GIF/MP4\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "ad99fcfa845939e5bed5d55d119c254d68dba5cdc43c80b392306e819cb1a954",
+      "data/shape_lib105_graphics.bejson",
+      false,
+      false
+    ],
+    [
+      "shape_lib105_tax_std.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Shape_lib105_tax_std\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"board_membership_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_label\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_font_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_text\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"lib105_tax_std\",\n      \"105 Standards & Taxonomies\",\n      \"#181820\",\n      \"#ffffff\",\n      \"MTV CMS scaffolds & schema registries\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "522970f6dddba13fcb535f235d394affdb99a34ae690ca6c71aa012cf83510cf",
+      "data/shape_lib105_tax_std.bejson",
+      false,
+      false
+    ],
+    [
+      "shape_app_bejson_cms.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Shape_app_bejson_cms\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"board_membership_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_label\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_font_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_text\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"app_bejson_cms\",\n      \"BEJSON_CMS (Flagship)\",\n      \"#181820\",\n      \"#ffffff\",\n      \"4-service publishing suite & static compiler\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "af6b6f0dce79c5790c6da12e710d912dc582f25914a57db92512137d50d86ac9",
+      "data/shape_app_bejson_cms.bejson",
+      false,
+      false
+    ],
+    [
+      "shape_app_cli_ai.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Shape_app_cli_ai\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"board_membership_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_label\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_font_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_text\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"app_cli_ai\",\n      \"CLI_AI & Profile_Chat\",\n      \"#181820\",\n      \"#ffffff\",\n      \"Stateful Interactions API & persistent logs\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "a552f2d244e9d605378f34f27916916a923a9719ec78db205ae2ca376b9df1ff",
+      "data/shape_app_cli_ai.bejson",
+      false,
+      false
+    ],
+    [
+      "shape_app_newagent.bejson",
+      ".bejson",
+      "{\n  \"Format\": \"BEJSON\",\n  \"Format_Version\": \"104\",\n  \"Format_Creator\": \"Elton Boehnen\",\n  \"Parent_Hierarchy\": \"../104a.mfdb.bejson\",\n  \"Records_Type\": [\n    \"Shape_app_newagent\"\n  ],\n  \"Fields\": [\n    {\n      \"name\": \"board_membership_fk\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_label\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_font_color\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"shape_text\",\n      \"type\": \"string\"\n    }\n  ],\n  \"Values\": [\n    [\n      \"app_newagent\",\n      \"NewAgent & Management_Tool\",\n      \"#181820\",\n      \"#ffffff\",\n      \"JobMaker state machine & 57-col CLI tools\"\n    ]\n  ]\n}",
+      "1.0.0",
+      "e7fd50cac983ff387182cfad65162b9c9c72cbf49ab31c3620e3ac64c319c749",
+      "data/shape_app_newagent.bejson",
+      false,
+      false
+    ]
+  ]
+}

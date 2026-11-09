@@ -1,23 +1,48 @@
 {
-  "Header": {
-    "Table_Name": "cubic_graphic_primitives",
-    "Format": "104a",
-    "Record_Count": 7,
-    "Author": "Elton Boehnen",
-    "Relational_ID": "a1b2c3d4-e5f6-4000-8000-000000000001",
-    "Description": "BEJSON 104a tabular vector graphic schema defining the canonical 3D isometric open branding cube and stage coordinates."
-  },
-  "Fields": [
-    "element_id",
-    "primitive_type",
-    "points_or_coords",
-    "fill_color",
-    "stroke_color",
-    "stroke_width",
-    "animation_mode",
-    "semantic_label"
+  "Format": "BEJSON",
+  "Format_Version": "104a",
+  "Format_Creator": "Elton Boehnen",
+  "Schema_Name": "cubic_graphic_primitives",
+  "Schema_Version": "1.0.0",
+  "Description": "BEJSON 104a tabular vector graphic schema defining the canonical 3D isometric open branding cube and stage coordinates.",
+  "Records_Type": [
+    "CubicGraphicPrimitive"
   ],
-  "Data": [
+  "Fields": [
+    {
+      "name": "element_id",
+      "type": "string"
+    },
+    {
+      "name": "primitive_type",
+      "type": "string"
+    },
+    {
+      "name": "points_or_coords",
+      "type": "string"
+    },
+    {
+      "name": "fill_color",
+      "type": "string"
+    },
+    {
+      "name": "stroke_color",
+      "type": "string"
+    },
+    {
+      "name": "stroke_width",
+      "type": "number"
+    },
+    {
+      "name": "animation_mode",
+      "type": "string"
+    },
+    {
+      "name": "semantic_label",
+      "type": "string"
+    }
+  ],
+  "Values": [
     [
       "elem_01_substrate",
       "rect",
