@@ -4,20 +4,22 @@
 
 # Elton Boehnen
 
-> Autonomous Systems Architecture, Deterministic Data Formats & Databaseless Computing Environments.
+> AI-Native Relational Databasing, Deterministic Data Formats & Autonomous Computing Engines.
 
+[![Database](https://img.shields.io/badge/Purpose-AI--Native%20Relational%20Databasing-DE2626.svg)](#central-purpose-ai-native-relational-databasing)
 [![Architecture](https://img.shields.io/badge/Architecture-BEJSON%20104a%20%2F%20105-DE2626.svg)](#bejson-schema-driven-graphics-engine)
 [![Libraries](https://img.shields.io/badge/Flagship-BEJSON%20Libraries%20105-red.svg)](#flagship-canonical-libraries-libraries_105--libraries_104)
 [![Persistence](https://img.shields.io/badge/Persistence-MFDB%20Flat--File-black.svg)](#multi-file-database-mfdb)
 [![Discipline](https://img.shields.io/badge/CLI%20Discipline-57--Column%20Portrait-black.svg)](#57-column-portrait-cli-discipline)
 [![Website](https://img.shields.io/badge/Portal-boehnenelton2024.pages.dev-blue.svg)](https://boehnenelton2024.pages.dev)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](#license--attribution)
+[![License](https://img.shields.io/badge/License-PolyForm%20Noncommercial-DE2626.svg)](#license--attribution)
 
 ---
 
 ## Table of Contents
 
 - [Overview](#overview)
+- [Central Purpose: AI-Native Relational Databasing](#central-purpose-ai-native-relational-databasing)
 - [BEJSON Schema-Driven Graphics Engine](#bejson-schema-driven-graphics-engine)
   - [1. The Tabular Schema Specification](#1-the-tabular-schema-specification)
   - [2. O(1) Field Map Cache Resolution](#2-o1-field-map-cache-resolution)
@@ -66,6 +68,37 @@
 This repository serves as the central architectural hub and profile landing portal for **Elton Boehnen** (`boehnenelton`). It documents the design philosophy, data formats, execution engines, and software platforms developed across the BEJSON and autonomous systems ecosystem.
 
 The ecosystem eliminates external database server overhead (such as PostgreSQL, MySQL, or heavy ORMs) in favor of portable, deterministic, flat-file structures. By combining high-speed structured JSON ledgers with strict schema boundaries, zero-dependency Python runtime libraries, and bounded autonomous execution agents, the system delivers complete local-first durability across Linux and Android Termux ARM64 environments.
+
+---
+
+## Central Purpose: AI-Native Relational Databasing
+
+The primary raison d'être of the `boehnenelton` repository and the entire BEJSON ecosystem is **AI-Native Relational Databasing**: solving data persistence, relational modeling, and state coordination specifically for artificial intelligence agents and large language model contexts.
+
+```
+TRADITIONAL DATABASE ARCHITECTURES              AI-NATIVE RELATIONAL DATABASING (BEJSON / MFDB)
+---------------------------------------------   -------------------------------------------------
+Heavy daemon process (PostgreSQL, MySQL)        Zero-daemon flat-file substrate
+TCP/IP sockets, connection pools, port auth     Direct atomic filesystem operations (zero drivers)
+Network serialization & translation latency     Native JSON parsing directly inside agent context
+Schema migrations via external tools            Self-validating runtime schema headers & manifests
+Object-Relational Mapping (ORM) impedance       100% token-dense tabular matrices (60-80% savings)
+Server maintenance & infrastructure costs       Portable, disk-backed, zero-cost version control
+```
+
+### Why AI-Native Relational Databasing Matters
+
+1. **Context Window Token Density**:
+   Standard JSON structures repeat object keys for every record: `[{"user_id": 1, "name": "Alice"}, {"user_id": 2, "name": "Bob"}]`. Over large datasets, repeated keys consume up to 80% of an LLM's context window. BEJSON separates schema headers (`Fields`) from row values (`Data`), slashing token consumption and dramatically improving context recall efficiency.
+
+2. **Direct Agent Operability Without Drivers**:
+   Autonomous coding agents operate natively on filesystems via text tools. Traditional SQL servers require external client drivers, daemon lifecycle management, and socket authentication that frequently fail or corrupt in sandboxed agent environments. BEJSON and MFDB give agents full relational capabilities (foreign keys, atomic writes, cascades) through standard filesystem tools.
+
+3. **Multi-File Database (MFDB) Relational Federation**:
+   MFDB solves multi-entity relationships without an engine daemon. A central manifest (`104a.mfdb.bejson`) registers entities, primary keys, and foreign keys across physical files, while `lib_bejson_Core_mfdb_core.py` enforces relational cascades and integrity checks in memory.
+
+4. **Cryptographic Identity & Proof Ledger**:
+   In Format 105, every record receives a cryptographically minted UUIDv4 and SHA-256 integrity digest at column 0. Autonomous agents operating across distributed environments can instantly verify whether data has been tampered with or corrupted across execution turns.
 
 ---
 
@@ -801,6 +834,9 @@ Build Pipelines            Headless Chromium Automation, Native Pillow WebP/GIF 
 
 ---
 
-### License
+### License & Attribution
 
-Distributed under the MIT License. Copyright (c) Elton Boehnen. All rights reserved.
+Distributed under the **PolyForm Noncommercial License 1.0.0** ([`LICENSE`](LICENSE) · [SPDX: PolyForm-Noncommercial-1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0)).
+Copyright (c) Elton Boehnen. All rights reserved.
+
+This software is licensed strictly for personal, research, educational, and noncommercial purposes. Commercial exploitation, service re-hosting, or proprietary redistribution requires explicit written authorization from the author.
