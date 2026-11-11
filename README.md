@@ -7,6 +7,8 @@
 > **Systems Architecture, Deterministic File-Backed Data Formats (`BEJSON 104` / `105` & `MFDB`), Static Content Publishing (`BEJSON_CMS`), and Stateful AI Orchestration (`CLI_AI`).**
 
 <p align="center">
+  <a href="https://boehnenelton2024.pages.dev/apps/bejson-web-editor/"><img src="https://img.shields.io/badge/Live_App-BEJSON_Editor-DE2626?style=flat-square&labelColor=000000" alt="Live App: BEJSON Editor" /></a>
+  <a href="https://boehnenelton2024.pages.dev/page/projects/github/"><img src="https://img.shields.io/badge/Showcase-GitHub_Projects-DE2626?style=flat-square&labelColor=000000" alt="Showcase: GitHub Projects" /></a>
   <a href="#flagship-platform-bejson_cms-file-backed-content-management--publishing-suite"><img src="https://img.shields.io/badge/Flagship_Platform-BEJSON__CMS-DE2626?style=flat-square&labelColor=000000" alt="Flagship Platform: BEJSON_CMS" /></a>
   <a href="#canonical-standard-libraries-libraries_104--libraries_105"><img src="https://img.shields.io/badge/Standard_Libraries-BEJSON_104_%26_105-DE2626?style=flat-square&labelColor=000000" alt="Standard Libraries: BEJSON 104 & 105" /></a>
   <a href="#multi-file-database-mfdb"><img src="https://img.shields.io/badge/Persistence-MFDB_Relational_Files-FFFFFF?style=flat-square&labelColor=000000" alt="Persistence: MFDB Relational Files" /></a>
@@ -63,6 +65,7 @@
   - [3. `NewAgent` & `JobMaker` (`v1.2.15 / PKG 135`) — Autonomous AI Coding Assistant & Task Execution Platform](#3-newagent--jobmaker-v1215--pkg-135--autonomous-ai-coding-assistant--task-execution-platform)
   - [4. `Project_Chunker` (`v1.8.0`) — Dual-MFDB Project Archiving, Snapshot Database & Atomic Scoop Engine](#4-project_chunker-v180--dual-mfdb-project-archiving-snapshot-database--atomic-scoop-engine)
   - [5. `Reminder_Tool` — Priority Terminal Launch Reminders](#5-reminder_tool--priority-terminal-launch-reminders)
+  - [6. `BEJSON_Editor` (`v1.2.9`) — Single-File Zero-Dependency Tabular & MFDB Workbench](#6-bejson_editor-v129--single-file-zero-dependency-tabular--mfdb-workbench)
 - [Cubic Architecture Visual Anchors](#cubic-architecture-visual-anchors)
 - [System Error Registry & Quality Gates](#system-error-registry--quality-gates)
 - [Technical Specifications & Storage Standards](#technical-specifications--storage-standards)
@@ -1329,6 +1332,17 @@ remind --json
   Complete task via: remind done <#>
 =========================================================
 ```
+
+### 6. `BEJSON_Editor` (`v1.2.9`) — Single-File Zero-Dependency Tabular & MFDB Workbench
+- **Repository**: [`BEJSON_Editor`](https://github.com/boehnenelton/BEJSON_Editor)
+- **Live Interactive App**: [boehnenelton2024.pages.dev/apps/bejson-web-editor/](https://boehnenelton2024.pages.dev/apps/bejson-web-editor/)
+- **Latest Release**: [`v1.2.9` (PKG 169)](https://github.com/boehnenelton/BEJSON_Editor/releases/tag/v1.2.9)
+- **Role**: Single-file, dependency-free browser editor and visual spreadsheet grid for BEJSON `104`/`104a` documents and MFDB `v1.31` multi-file relational database manifests.
+- **Key Capabilities**:
+  - **Self-Contained Browser Runtime**: Operates completely offline with zero external CDNs, npm bundles, or server dependencies.
+  - **Strict CSP Security**: Validated SHA-256 script hashing meta tag with zero `'unsafe-inline'` evaluation.
+  - **Web Crypto Encryption**: Client-side AES-256-GCM cipher and PBKDF2-SHA256 key derivation for sensitive cell encryption.
+  - **Relational MFDB Linking**: Interactive inspector and editor for `104a.mfdb.bejson` manifests and related tabular entities.
 
 ---
 
