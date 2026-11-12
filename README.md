@@ -19,8 +19,45 @@
 
 ---
 
+## Recently Updated Repositories
+
+<!-- RECENT_REPOS_START -->
+A clean, direct directory of recently updated open-source repositories across the Boehnen software ecosystem:
+
+- [`backup-tool-agy`](https://github.com/boehnenelton/backup-tool-agy) — Universal Config-Driven 10-Slot Loaded Chamber & Multi-Scope Ecosystem Snapshot System. *(Updated 2026-11-12)*
+- [`Android_Compiler`](https://github.com/boehnenelton/Android_Compiler) — Automated Android Gradle build system, APK compilation engine, target selector, and Flask management web service. *(Updated 2026-11-12)*
+- [`Management_Tool`](https://github.com/boehnenelton/Management_Tool) — System maintenance job runner, urgent task coordinator, and standing service manager for Termux ecosystems. *(Updated 2026-11-11)*
+- [`Project_Chunker`](https://github.com/boehnenelton/Project_Chunker) — Atomic archiving, snapshotting, and project registry with CLI, TUI, and Flask web interfaces built on the BEJSON ecosystem. *(Updated 2026-11-11)*
+- [`BEHTML_IDE`](https://github.com/boehnenelton/BEHTML_IDE) — Spatial UI design environment and compiler enforcing 8-lane quantized coordinates, Ry=32px row quantization, and zero-filler skeletons. *(Updated 2026-11-11)*
+- [`env_template`](https://github.com/boehnenelton/env_template) — Sanitized environment variable definitions and secure credentials templates conforming to BEJSON 104a. *(Updated 2026-11-11)*
+- [`AGYSKILLS`](https://github.com/boehnenelton/AGYSKILLS) — Canonical skill bundle, lifecycle hooks, and agentic workflow registry for the Antigravity CLI and autonomous agent tooling. *(Updated 2026-11-11)*
+- [`BEJSON_105_Graphics_Showcase`](https://github.com/boehnenelton/BEJSON_105_Graphics_Showcase) — Visual diagram showcase and SVG rendering demos for BEJSON Format 105 data envelopes. *(Updated 2026-11-11)*
+- [`BEJSON_104`](https://github.com/boehnenelton/BEJSON_104) — Official 4-language Foundational Era reference implementation for BEJSON 104, 104a, 104db, Nested 104, and MFDB v1.31. *(Updated 2026-11-11)*
+- [`Reminder_Tool`](https://github.com/boehnenelton/Reminder_Tool) — Authoritative BEJSON 104a reminder management engine with priority queuing and native Termux notification dispatch. *(Updated 2026-11-11)*
+- [`BEJSON_105`](https://github.com/boehnenelton/BEJSON_105) — Official 4-language Integrity Era reference implementation for BEJSON 105, 105a, 105db, and MFDB v1.40. *(Updated 2026-11-11)*
+- [`BEJSON_Editor`](https://github.com/boehnenelton/BEJSON_Editor) — Lightweight, schema-aware tabular data editor and validation workbench for BEJSON 104 and 105 data stores. *(Updated 2026-11-11)*
+- [`Gemini_Interactions`](https://github.com/boehnenelton/Gemini_Interactions) — Google Gemini API conversational session chaining, tool orchestration, and autonomous agent loops. *(Updated 2026-11-11)*
+- [`Cognitive_Core`](https://github.com/boehnenelton/Cognitive_Core) — Context and cognitive state serialization engine for AI agents backed by BEJSON 104a stores. *(Updated 2026-11-11)*
+- [`Experimental_CMS`](https://github.com/boehnenelton/Experimental_CMS) — Experimental feature laboratory and testbed for BEJSON CMS components. *(Updated 2026-11-11)*
+- [`BEJSON_104_Compiled_Core`](https://github.com/boehnenelton/BEJSON_104_Compiled_Core) — Pre-compiled high-throughput binary and byte-code core distribution for BEJSON 104. *(Updated 2026-11-11)*
+- [`Management_CMS`](https://github.com/boehnenelton/Management_CMS) — Administrative web workstation backend and data management engine for BEJSON and MFDB stores. *(Updated 2026-11-11)*
+- [`Management_CMS_UI`](https://github.com/boehnenelton/Management_CMS_UI) — Administrative web workstation and data management UI for BEJSON and MFDB flat-file stores. *(Updated 2026-11-11)*
+- [`Audio_Transcriber`](https://github.com/boehnenelton/Audio_Transcriber) — Local audio transcription and speech-to-text pipeline with timestamped BEJSON 104a tabular output. *(Updated 2026-11-11)*
+- [`Doc_Chunker`](https://github.com/boehnenelton/Doc_Chunker) — Text and markdown document serialization engine for packing codebases and documentation into BEJSON containers. *(Updated 2026-11-11)*
+- [`BE105`](https://github.com/boehnenelton/BE105) — Next-generation Integrity Era core libraries, cryptographic hash chains, and cross-entity relational cascades. *(Updated 2026-11-11)*
+- [`MFDB_Diagrammer`](https://github.com/boehnenelton/MFDB_Diagrammer) — Deterministic architecture flowchart and schema diagram compiler for Multi-File Database (MFDB) topologies. *(Updated 2026-11-11)*
+- [`BEJSON-BEHTML-DUAL-IDE`](https://github.com/boehnenelton/BEJSON-BEHTML-DUAL-IDE) — Integrated dual IDE connecting addressable programmable BEHTML spatial UI surfaces to BEJSON multi-file databases. *(Updated 2026-11-11)*
+- [`Job_Runner_React`](https://github.com/boehnenelton/Job_Runner_React) — Goal-oriented schema-based autonomous agent execution engine, task graph orchestrator, and dynamic state runner. *(Updated 2026-11-11)*
+- [`BEJSON_CMS`](https://github.com/boehnenelton/BEJSON_CMS) — Zero-SQL, local-first content management and static site publishing engine powered by BEJSON and MFDB. *(Updated 2026-11-11)*
+- [`NewAgent`](https://github.com/boehnenelton/NewAgent) — Autonomous AI coding assistant, task graph orchestrator, and execution platform for local developer environments. *(Updated 2026-10-16)*
+
+<!-- RECENT_REPOS_END -->
+
+---
+
 ## Table of Contents
 
+- [Recently Updated Repositories](#recently-updated-repositories)
 - [Overview & Quick Start Setup](#overview--quick-start-setup)
   - [Central Purpose: AI-Native Relational Databasing (`BEJSON` & `MFDB`)](#central-purpose-ai-native-relational-databasing-bejson--mfdb)
   - [Prerequisites & Environment Setup](#prerequisites--environment-setup)
