@@ -100,18 +100,18 @@ By declaring schema fields (`Fields`) once at the top of a document and packing 
 - **Runtime**: Python `3.10+` (standard library core: `json`, `hashlib`, `uuid`, `urllib.request`, `tempfile`, `os`)
 - **Optional Visual & Web Dependencies**: `flask` (for `BEJSON_CMS`, `NewAgent`, and `Project_Chunker` web consoles), `playwright` + `Pillow` + `ffmpeg` (for compiling deterministic SVG/GIF architecture diagrams)
 
+- **Environment Baseline**: See [`ENV.example.txt`](ENV.example.txt) and [`env_template`](https://github.com/boehnenelton/env_template) for sanitized pointers.
+- **Platform Path Resolution**: Priority ordered across Android internal (`/storage/emulated/0`), external SD, Termux, and desktop Linux.
+- **Fail-Closed Validation**: Scripts validate `active_dev_id` (`ANDROID_TERMUX_PRIMARY` / `LINUX_WORKSTATION`) and verify paths before execution.
+- **Protected Directories**: "only idx" mode enforces Index-Only cataloging; blocks recursive wipes, moves, or deletes on protected roots.
+
 ```bash
 # Clone the profile architecture hub
-git clone https://github.com/boehnenelton/boehnenelton.git
-cd boehnenelton
+git clone https://github.com/boehnenelton/boehnenelton.git && cd boehnenelton
 
-# Clone the #1 Flagship BEJSON_CMS platform
+# Clone flagship ecosystem platforms
 git clone https://github.com/boehnenelton/BEJSON_CMS.git
-
-# Clone the NewAgent autonomous AI coding & JobMaker platform
 git clone https://github.com/boehnenelton/NewAgent.git
-
-# Clone the CLI_AI & Profile_Chat suite
 git clone https://github.com/boehnenelton/CLI_AI.git
 ```
 

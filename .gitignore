@@ -7,6 +7,11 @@ __pycache__/
 .env
 *.env
 secureenv*.json
+api_config.json
+active_key.json
+keys*.bejson
+key_state*.bejson
+key_usage*.bejson
 
 # Temporary build frames
 *temp*
